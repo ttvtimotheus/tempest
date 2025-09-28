@@ -1,0 +1,110 @@
+[
+  {
+    "id": "hyperx",
+    "name": "HyperX",
+    "category": "Gaming Peripherals",
+    "tier": "title",
+    "description": "Premium gaming headsets, keyboards, and accessories",
+    "logo": "/images/sponsors/hyperx-logo.svg",
+    "website": "https://hyperx.com",
+    "partnership": {
+      "startDate": "2023-01-01",
+      "duration": "3 years",
+      "benefits": [
+        "Gaming peripherals for all players",
+        "Tournament setup support",
+        "Co-branded merchandise"
+      ]
+    }
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA",
+    "category": "Hardware",
+    "tier": "major",
+    "description": "Graphics cards and gaming technology",
+    "logo": "/images/sponsors/nvidia-logo.svg",
+    "website": "https://nvidia.com",
+    "partnership": {
+      "startDate": "2023-03-01",
+      "duration": "2 years",
+      "benefits": [
+        "RTX 4090 graphics cards",
+        "GeForce NOW streaming",
+        "Technical support"
+      ]
+    }
+  },
+  {
+    "id": "redbull",
+    "name": "Red Bull",
+    "category": "Energy Drinks",
+    "tier": "major",
+    "description": "Energy drinks and lifestyle brand",
+    "logo": "/images/sponsors/redbull-logo.svg", 
+    "website": "https://redbull.com",
+    "partnership": {
+      "startDate": "2023-06-01",
+      "duration": "2 years",
+      "benefits": [
+        "Event sponsorship",
+        "Content collaboration",
+        "Player nutrition support"
+      ]
+    }
+  },
+  {
+    "id": "steelseries",
+    "name": "SteelSeries",
+    "category": "Gaming Gear",
+    "tier": "supporting",
+    "description": "Gaming mice, keyboards, and headsets",
+    "logo": "/images/sponsors/steelseries-logo.svg",
+    "website": "https://steelseries.com",
+    "partnership": {
+      "startDate": "2023-04-15",
+      "duration": "1 year",
+      "benefits": [
+        "Gaming mice and mousepads",
+        "Headset support",
+        "Product testing feedback"
+      ]
+    }
+  },
+  {
+    "id": "discord",
+    "name": "Discord",
+    "category": "Communication",
+    "tier": "supporting",
+    "description": "Voice and text communication platform",
+    "logo": "/images/sponsors/discord-logo.svg",
+    "website": "https://discord.com",
+    "partnership": {
+      "startDate": "2023-02-01",
+      "duration": "1 year",
+      "benefits": [
+        "Server management tools",
+        "Community features",
+        "Streaming integration"
+      ]
+    }
+  },
+  {
+    "id": "secretlab",
+    "name": "Secretlab",
+    "category": "Gaming Chairs",
+    "tier": "supporting",
+    "description": "Premium gaming and office chairs",
+    "logo": "/images/sponsors/secretlab-logo.svg",
+    "website": "https://secretlab.co",
+    "partnership": {
+      "startDate": "2023-05-01",
+      "duration": "1 year",
+      "benefits": [
+        "Gaming chairs for all players",
+        "Ergonomic support",
+        "Custom branding options"
+      ]
+    }
+  }
+]

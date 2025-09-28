@@ -1,0 +1,218 @@
+[
+  {
+    "id": "tempest-valorant",
+    "name": "Tempest VALORANT",
+    "game": "valorant",
+    "region": "EU",
+    "founded": "2023",
+    "description": "Our premier VALORANT roster competing in the European circuit",
+    "achievements": [
+      "VCT Challengers EU Runner-up 2024",
+      "Riot Games ONE Regional Champions 2023",
+      "ESL Impact Series Winners 2023"
+    ],
+    "roster": [
+      {
+        "id": "tempest-phoenix",
+        "name": "Phoenix",
+        "realName": "Marcus Johnson",
+        "role": "Duelist",
+        "country": "UK",
+        "age": 22,
+        "joinDate": "2023-03-15"
+      },
+      {
+        "id": "tempest-sage",
+        "name": "Sage",
+        "realName": "Elena Rodriguez",
+        "role": "Sentinel",
+        "country": "ES",
+        "age": 20,
+        "joinDate": "2023-03-15"
+      },
+      {
+        "id": "tempest-sova",
+        "name": "Sova",
+        "realName": "Dmitri Volkov",
+        "role": "Initiator",
+        "country": "RU",
+        "age": 24,
+        "joinDate": "2023-03-15"
+      },
+      {
+        "id": "tempest-omen",
+        "name": "Omen",
+        "realName": "Jean-Baptiste Dubois",
+        "role": "Controller",
+        "country": "FR",
+        "age": 21,
+        "joinDate": "2023-03-15"
+      },
+      {
+        "id": "tempest-jett",
+        "name": "Jett",
+        "realName": "Kim Min-jun",
+        "role": "Duelist",
+        "country": "KR",
+        "age": 19,
+        "joinDate": "2023-07-20"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Alex Thompson",
+        "role": "Head Coach",
+        "country": "US"
+      },
+      {
+        "name": "Sarah Chen",
+        "role": "Analyst",
+        "country": "CA"
+      }
+    ]
+  },
+  {
+    "id": "tempest-cs2",
+    "name": "Tempest CS2",
+    "game": "cs2",
+    "region": "EU",
+    "founded": "2023",
+    "description": "Our Counter-Strike 2 team ready to dominate the competitive scene",
+    "achievements": [
+      "ESL Pro League Season 18 Playoffs",
+      "IEM Katowice 2024 Quarter-finals",
+      "BLAST Premier Spring Groups 2024"
+    ],
+    "roster": [
+      {
+        "id": "tempest-awper",
+        "name": "AWPer",
+        "realName": "Nikola Petrovic",
+        "role": "AWPer",
+        "country": "RS",
+        "age": 25,
+        "joinDate": "2023-04-10"
+      },
+      {
+        "id": "tempest-rifler1",
+        "name": "Rifler",
+        "realName": "Gustav Andersen",
+        "role": "Rifler",
+        "country": "DK",
+        "age": 23,
+        "joinDate": "2023-04-10"
+      },
+      {
+        "id": "tempest-igl",
+        "name": "IGL",
+        "realName": "Pierre Laurent",
+        "role": "In-Game Leader",
+        "country": "FR",
+        "age": 26,
+        "joinDate": "2023-04-10"
+      },
+      {
+        "id": "tempest-entry",
+        "name": "Entry",
+        "realName": "Max Mueller",
+        "role": "Entry Fragger",
+        "country": "DE",
+        "age": 22,
+        "joinDate": "2023-04-10"
+      },
+      {
+        "id": "tempest-support",
+        "name": "Support",
+        "realName": "Tomasz Kowalski",
+        "role": "Support",
+        "country": "PL",
+        "age": 24,
+        "joinDate": "2023-08-15"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Henrik Larsson",
+        "role": "Head Coach",
+        "country": "SE"
+      },
+      {
+        "name": "Robert Mitchell",
+        "role": "Performance Coach",
+        "country": "UK"
+      }
+    ]
+  },
+  {
+    "id": "tempest-lol",
+    "name": "Tempest LoL",
+    "game": "lol",
+    "region": "EU",
+    "founded": "2023",
+    "description": "Our League of Legends team competing in the European Regional Leagues",
+    "achievements": [
+      "ERL Spring Split Finals 2024",
+      "EU Masters Summer 2023 Semi-finals",
+      "Prime League Division 1 Champions 2023"
+    ],
+    "roster": [
+      {
+        "id": "tempest-toplaner",
+        "name": "TopLaner",
+        "realName": "Andreas Schmidt",
+        "role": "Top",
+        "country": "DE",
+        "age": 20,
+        "joinDate": "2023-01-20"
+      },
+      {
+        "id": "tempest-jungler",
+        "name": "Jungler", 
+        "realName": "Lukasz Nowak",
+        "role": "Jungle",
+        "country": "PL",
+        "age": 21,
+        "joinDate": "2023-01-20"
+      },
+      {
+        "id": "tempest-midlaner",
+        "name": "MidLaner",
+        "realName": "Giovanni Rossi",
+        "role": "Mid",
+        "country": "IT",
+        "age": 19,
+        "joinDate": "2023-01-20"
+      },
+      {
+        "id": "tempest-adc",
+        "name": "ADCarry",
+        "realName": "Erik Johannsen",
+        "role": "ADC",
+        "country": "NO",
+        "age": 22,
+        "joinDate": "2023-01-20"
+      },
+      {
+        "id": "tempest-support-lol",
+        "name": "Support",
+        "realName": "Miguel Santos",
+        "role": "Support",
+        "country": "PT",
+        "age": 23,
+        "joinDate": "2023-06-01"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Carlos Mendez",
+        "role": "Head Coach",
+        "country": "ES"
+      },
+      {
+        "name": "Lisa Wang",
+        "role": "Strategic Coach",
+        "country": "CN"
+      }
+    ]
+  }
+]

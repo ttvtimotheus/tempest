@@ -1,0 +1,177 @@
+[
+  {
+    "id": "match-001",
+    "game": "valorant",
+    "tournament": "VCT Challengers EU",
+    "opponent": "Fnatic Academy",
+    "date": "2024-12-15T18:00:00.000Z",
+    "status": "upcoming",
+    "result": null,
+    "maps": [],
+    "vod": null,
+    "stream": "https://twitch.tv/riotgames"
+  },
+  {
+    "id": "match-002",
+    "game": "cs2",
+    "tournament": "ESL Pro League",
+    "opponent": "G2 Esports",
+    "date": "2024-12-12T20:00:00.000Z",
+    "status": "upcoming",
+    "result": null,
+    "maps": [],
+    "vod": null,
+    "stream": "https://twitch.tv/esl_csgo"
+  },
+  {
+    "id": "match-003",
+    "game": "lol",
+    "tournament": "ERL Winter Split",
+    "opponent": "MAD Lions Madrid",
+    "date": "2024-12-10T19:00:00.000Z",
+    "status": "upcoming",
+    "result": null,
+    "maps": [],
+    "vod": null,
+    "stream": "https://twitch.tv/lec"
+  },
+  {
+    "id": "match-004",
+    "game": "valorant",
+    "tournament": "VCT Challengers EU",
+    "opponent": "Team Liquid",
+    "date": "2024-09-25T17:00:00.000Z",
+    "status": "finished",
+    "result": "W",
+    "maps": [
+      {
+        "name": "Bind",
+        "scoreTeam": 13,
+        "scoreOpp": 11
+      },
+      {
+        "name": "Haven",
+        "scoreTeam": 13,
+        "scoreOpp": 8
+      }
+    ],
+    "vod": "https://youtube.com/watch?v=example1",
+    "stream": null
+  },
+  {
+    "id": "match-005",
+    "game": "cs2",
+    "tournament": "IEM Katowice",
+    "opponent": "Astralis",
+    "date": "2024-09-20T16:00:00.000Z",
+    "status": "finished",
+    "result": "L",
+    "maps": [
+      {
+        "name": "Dust2",
+        "scoreTeam": 14,
+        "scoreOpp": 16
+      },
+      {
+        "name": "Mirage",
+        "scoreTeam": 12,
+        "scoreOpp": 16
+      }
+    ],
+    "vod": "https://youtube.com/watch?v=example2",
+    "stream": null
+  },
+  {
+    "id": "match-006",
+    "game": "lol",
+    "tournament": "EU Masters",
+    "opponent": "Karmine Corp Blue",
+    "date": "2024-09-18T18:30:00.000Z",
+    "status": "finished",
+    "result": "W",
+    "maps": [
+      {
+        "name": "Game 1",
+        "scoreTeam": 1,
+        "scoreOpp": 0
+      },
+      {
+        "name": "Game 2", 
+        "scoreTeam": 1,
+        "scoreOpp": 0
+      },
+      {
+        "name": "Game 3",
+        "scoreTeam": 1,
+        "scoreOpp": 0
+      }
+    ],
+    "vod": "https://youtube.com/watch?v=example3",
+    "stream": null
+  },
+  {
+    "id": "match-007",
+    "game": "valorant",
+    "tournament": "VCT Challengers EU",
+    "opponent": "Vitality",
+    "date": "2024-09-28T19:30:00.000Z",
+    "status": "live",
+    "result": null,
+    "maps": [
+      {
+        "name": "Ascent",
+        "scoreTeam": 8,
+        "scoreOpp": 7
+      }
+    ],
+    "vod": null,
+    "stream": "https://twitch.tv/riotgames"
+  },
+  {
+    "id": "match-008",
+    "game": "cs2",
+    "tournament": "BLAST Premier",
+    "opponent": "NAVI",
+    "date": "2024-12-08T21:00:00.000Z",
+    "status": "upcoming",
+    "result": null,
+    "maps": [],
+    "vod": null,
+    "stream": "https://twitch.tv/blast"
+  },
+  {
+    "id": "match-009",
+    "game": "lol",
+    "tournament": "ERL Winter Split",
+    "opponent": "Team BDS Academy",
+    "date": "2024-12-14T20:30:00.000Z",
+    "status": "upcoming",
+    "result": null,
+    "maps": [],
+    "vod": null,
+    "stream": "https://twitch.tv/lfl"
+  },
+  {
+    "id": "match-010",
+    "game": "valorant",
+    "tournament": "Riot Games ONE",
+    "opponent": "KOI",
+    "date": "2024-09-15T16:30:00.000Z",
+    "status": "finished",
+    "result": "W",
+    "maps": [
+      {
+        "name": "Fracture",
+        "scoreTeam": 13,
+        "scoreOpp": 9
+      },
+      {
+        "name": "Icebox",
+        "scoreTeam": 13,
+        "scoreOpp": 11
+      }
+    ],
+    "vod": "https://youtube.com/watch?v=example4",
+    "stream": null
+  }
+]
