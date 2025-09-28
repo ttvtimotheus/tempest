@@ -69,33 +69,33 @@ export function StatsSection() {
                 key={stat.label}
                 glowColor={stat.glowColor}
                 customSize={true}
-                className="w-full h-64 flex flex-col justify-between"
+                className="w-full h-64 flex flex-col justify-center items-center text-center p-6"
               >
-                <div className="flex flex-col items-center text-center space-y-4">
+                <div className="flex flex-col items-center space-y-4">
                   {/* Icon */}
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   
                   {/* Value */}
-                  <div>
-                    <div className="text-5xl font-bold text-foreground mb-1">
+                  <div className="space-y-2">
+                    <div className="text-5xl font-bold text-foreground">
                       {stat.value}{stat.suffix}
                     </div>
                     <div className="text-sm uppercase tracking-wider text-primary font-medium">
                       {stat.highlight}
                     </div>
                   </div>
-                </div>
-                
-                {/* Bottom section */}
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    {stat.label}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {stat.description}
-                  </p>
+                  
+                  {/* Title and Description */}
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {stat.label}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {stat.description}
+                    </p>
+                  </div>
                 </div>
               </GlowCard>
             )
