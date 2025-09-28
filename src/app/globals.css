@@ -1,67 +1,78 @@
 @import "tailwindcss";
 
+/* Premium Gaming Design System - Sophisticated & Unique */
 :root {
-  /* Light theme */
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 84% 4.9%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 94.1%;
-  --radius: 0.5rem;
+  /* Core Identity Colors - Refined dark palette */
+  --background: 240 10% 3.9%;        /* Near black with subtle blue tint */
+  --foreground: 0 0% 95%;             /* Soft white, not pure */
+  --card: 240 5% 6%;                  /* Elevated surface */
+  --card-foreground: 0 0% 95%;
+  --popover: 240 7% 8%;
+  --popover-foreground: 0 0% 95%;
   
-  /* Neon accent colors */
-  --neon-cyan: 180 100% 50%;
-  --neon-purple: 280 100% 50%;
-  --neon-pink: 320 100% 50%;
-  --neon-green: 150 100% 50%;
-  --neon-blue: 210 100% 50%;
+  /* Strategic Accent Palette - Less saturated, more sophisticated */
+  --primary: 200 100% 28%;           /* Deep electric blue */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4% 16%;           /* Graphite */
+  --secondary-foreground: 0 0% 90%;
+  --muted: 240 3% 12%;               /* Subtle elevation */
+  --muted-foreground: 240 5% 50%;    /* Reduced contrast for hierarchy */
+  --accent: 200 80% 35%;             /* Accent blue */
+  --accent-foreground: 0 0% 98%;
+  
+  /* Status with sophistication */
+  --destructive: 0 65% 38%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5% 10%;              /* Subtle borders */
+  --input: 240 5% 10%;
+  --ring: 200 100% 40%;
+  --radius: 0.125rem;                /* Sharper, more modern */
+  
+  /* Signature Gaming Accents - More refined */
+  --glow-primary: 200 100% 45%;      /* Primary glow */
+  --glow-danger: 350 100% 55%;       /* Red glow */
+  --glow-success: 140 100% 45%;      /* Green glow */
+  
+  /* Game-specific brand colors */
+  --valorant: 348 83% 57%;           /* Riot red */
+  --cs2: 30 100% 50%;                /* CS orange */
+  --lol: 200 100% 45%;               /* League blue */
 }
 
 @theme inline {
   --default-font-family: var(--font-sans);
   --default-mono-font-family: var(--font-mono);
   
-  /* Color tokens */
+  /* Color system */
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
   --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-muted: hsl(var(--muted));
   --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
   --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
   
-  /* Neon colors */
-  --color-neon-cyan: hsl(var(--neon-cyan));
-  --color-neon-purple: hsl(var(--neon-purple));
-  --color-neon-pink: hsl(var(--neon-pink));
-  --color-neon-green: hsl(var(--neon-green));
-  --color-neon-blue: hsl(var(--neon-blue));
+  /* Premium Typography Scale */
+  --font-size-xs: 0.75rem;       /* 12px */
+  --font-size-sm: 0.875rem;      /* 14px */
+  --font-size-base: 1rem;        /* 16px */
+  --font-size-lg: 1.125rem;      /* 18px */
+  --font-size-xl: 1.25rem;       /* 20px */
+  --font-size-2xl: 1.5rem;       /* 24px */
+  --font-size-3xl: 1.875rem;     /* 30px */
+  --font-size-4xl: 2.25rem;      /* 36px */
+  --font-size-5xl: 3rem;         /* 48px */
+  --font-size-6xl: 3.75rem;      /* 60px */
+  --font-size-7xl: 4.5rem;       /* 72px */
+  --font-size-8xl: 6rem;         /* 96px */
+  
+  /* Letter Spacing */
+  --tracking-tightest: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
   
   /* Animations */
   --animate-fade-in: fade-in 0.5s ease-out;
@@ -107,15 +118,57 @@
   50% { opacity: 0.7; }
 }
 
-/* Base styles */
+/* Reset & Base */
 * {
   border-color: hsl(var(--border));
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  font-feature-settings: "rlig" 1, "calt" 1;
+  font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  
+  /* Premium gradient background */
+  background-image: 
+    radial-gradient(circle at 20% 50%, hsla(var(--primary) / 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, hsla(var(--accent) / 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, hsla(var(--glow-primary) / 0.01) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Typography Foundation */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--font-size-6xl); font-weight: 700; }
+h2 { font-size: var(--font-size-4xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+
+p {
+  line-height: 1.7;
+  color: hsla(var(--foreground) / 0.85);
+}
+
+/* Premium Links */
+a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--primary));
 }
 
 /* Focus styles for accessibility */

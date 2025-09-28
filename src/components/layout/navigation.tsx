@@ -38,17 +38,14 @@ export function Navigation() {
   }
 
   return (
-    <nav className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo */}
+    <nav className="bg-background/80 backdrop-blur-xl border-b border-border/50 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex justify-between h-20">
+          {/* Logo - Minimal and sophisticated */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-neon-cyan to-neon-blue rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-sm">T</span>
-              </div>
-              <span className="font-bold text-xl text-foreground">
-                Tempest <span className="text-neon-cyan">eSports</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <span className="text-2xl font-bold tracking-tighter">
+                TEMPEST
               </span>
             </Link>
           </div>
