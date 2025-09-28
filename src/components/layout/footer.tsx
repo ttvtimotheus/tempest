@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Twitter, Youtube, Twitch, Instagram, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -50,13 +51,14 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             {/* Logo and Description */}
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-neon-cyan to-neon-blue rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-sm">T</span>
-              </div>
-              <span className="font-bold text-xl text-foreground">
-                Tempest <span className="text-neon-cyan">eSports</span>
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/images/tempest-logo.svg"
+                alt="Tempest eSports"
+                width={180}
+                height={45}
+                className="h-10 w-auto filter brightness-100"
+              />
             </div>
             <p className="text-muted-foreground text-base">
               Professional gaming organization competing at the highest level

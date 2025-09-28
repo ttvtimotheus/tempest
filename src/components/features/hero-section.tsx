@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { Play } from "lucide-react"
+import { StarBorder } from "@/components/ui/star-border"
 
 export function HeroSection() {
   const [currentGame, setCurrentGame] = useState(0)
@@ -26,7 +28,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden -mt-24 pt-24">
       {/* Sophisticated animated background with parallax */}
       <div className="absolute inset-0">
         <div 
@@ -88,15 +90,23 @@ export function HeroSection() {
               </p>
             </div>
             
-            {/* Premium CTAs */}
+            {/* Premium CTAs with StarBorder */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <a 
-                href="/matches"
-                className="group relative px-8 py-4 overflow-hidden border border-primary/30 hover:border-primary/50 transition-all duration-300"
+              <StarBorder 
+                as="a"
+                href="https://twitch.tv/tempestesports"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="hsl(var(--primary))"
+                speed="4s"
+                className="cursor-pointer"
               >
-                <span className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300"></span>
-                <span className="relative text-sm uppercase tracking-wider font-medium">Watch Live</span>
-              </a>
+                <div className="flex items-center gap-2">
+                  <Play className="w-4 h-4" />
+                  <span className="text-sm uppercase tracking-wider font-medium">Watch Live</span>
+                </div>
+              </StarBorder>
+              
               <a 
                 href="/teams"
                 className="group px-8 py-4 border border-border/50 hover:border-muted-foreground/50 transition-all duration-300"

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -49,10 +50,14 @@ export function SponsorsSection() {
                   <Badge className={`${getTierColor(sponsor.tier)} mb-4`}>
                     {getTierLabel(sponsor.tier)}
                   </Badge>
-                  <div className="w-32 h-16 bg-muted/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                    <span className="text-2xl font-bold text-muted-foreground">
-                      {sponsor.name}
-                    </span>
+                  <div className="w-32 h-16 bg-gradient-to-br from-muted/10 to-muted/30 rounded-lg flex items-center justify-center mb-4 mx-auto border border-border/30 p-3">
+                    <Image
+                      src={sponsor.logo}
+                      alt={`${sponsor.name} logo`}
+                      width={120}
+                      height={60}
+                      className="max-w-full max-h-full object-contain filter brightness-90 hover:brightness-110 transition-all duration-300"
+                    />
                   </div>
                   <h4 className="text-lg font-semibold text-foreground mb-2">
                     {sponsor.name}
@@ -86,10 +91,14 @@ export function SponsorsSection() {
                 className="p-6 bg-card/60 backdrop-blur-sm hover:bg-card/80 transition-colors border-blue-400/10"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-muted/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-lg font-bold text-muted-foreground">
-                      {sponsor.name.substring(0, 2)}
-                    </span>
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-primary/20 p-2">
+                    <Image
+                      src={sponsor.logo}
+                      alt={`${sponsor.name} logo`}
+                      width={60}
+                      height={60}
+                      className="max-w-full max-h-full object-contain filter brightness-90 hover:brightness-110 transition-all duration-300"
+                    />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
@@ -123,7 +132,7 @@ export function SponsorsSection() {
           <h3 className="text-xl font-semibold text-center mb-8 text-muted-foreground">
             Supporting Partners
           </h3>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60 hover:opacity-100 transition-opacity">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 opacity-70 hover:opacity-100 transition-opacity">
             {supportingSponsors.map((sponsor) => (
               <a
                 key={sponsor.id}
@@ -132,10 +141,14 @@ export function SponsorsSection() {
                 rel="noopener noreferrer"
                 className="group"
               >
-                <div className="w-24 h-12 bg-muted/20 rounded-lg flex items-center justify-center group-hover:bg-muted/40 transition-colors">
-                  <span className="text-sm font-semibold text-muted-foreground group-hover:text-foreground">
-                    {sponsor.name}
-                  </span>
+                <div className="aspect-square bg-gradient-to-br from-muted/5 to-muted/20 rounded-lg flex items-center justify-center group-hover:from-primary/10 group-hover:to-accent/10 transition-all duration-300 border border-border/20 group-hover:border-primary/30 p-4">
+                  <Image
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    width={80}
+                    height={80}
+                    className="max-w-full max-h-full object-contain filter brightness-75 group-hover:brightness-100 transition-all duration-300 opacity-60 group-hover:opacity-100"
+                  />
                 </div>
               </a>
             ))}
