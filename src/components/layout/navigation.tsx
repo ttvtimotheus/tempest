@@ -31,14 +31,14 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-red-500 rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-300" />
-              <div className="relative bg-black px-3 py-1 rounded">
-                <span className="text-2xl font-black text-white">
-                  TEMP<span className="text-red-500">EST</span>
-                </span>
-              </div>
-            </div>
+            <Image
+              src="/images/tempest-logo.svg"
+              alt="Tempest eSports"
+              width={140}
+              height={35}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
           
           {/* Desktop Navigation */}
