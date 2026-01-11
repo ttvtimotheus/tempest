@@ -16,7 +16,7 @@ export function TeamsShowcase() {
       logo: '/images/games/valorant.png',
       players: 6,
       achievements: '3x Regional Champions',
-      color: 'from-red-600 to-pink-600',
+      color: 'from-red-600 to-red-800',
       link: '/teams/valorant'
     },
     {
@@ -27,7 +27,7 @@ export function TeamsShowcase() {
       logo: '/images/games/cs2.png',
       players: 5,
       achievements: '2x Major Qualifiers',
-      color: 'from-orange-600 to-yellow-600',
+      color: 'from-red-700 to-red-900',
       link: '/teams/cs2'
     },
     {
@@ -38,7 +38,7 @@ export function TeamsShowcase() {
       logo: '/images/games/league.png',
       players: 7,
       achievements: 'Spring Split Winners',
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-red-500 to-red-700',
       link: '/teams/league'
     },
     {
@@ -49,7 +49,7 @@ export function TeamsShowcase() {
       logo: '/images/games/rocket-league.png',
       players: 3,
       achievements: 'Regional Finals',
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-red-800 to-gray-900',
       link: '/teams/rocket-league'
     },
     {
@@ -60,7 +60,7 @@ export function TeamsShowcase() {
       logo: '/images/games/apex.png',
       players: 3,
       achievements: '5x Tournament Wins',
-      color: 'from-red-600 to-orange-600',
+      color: 'from-red-600 to-black',
       link: '/teams/apex'
     }
   ]

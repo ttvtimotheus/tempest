@@ -1,9 +1,13 @@
 'use client'
 
+import * as Sentry from '@sentry/nextjs'
 import { motion } from 'framer-motion'
 import { Twitter, Instagram, Youtube, MessageCircle, Users, Heart } from 'lucide-react'
 import Link from 'next/link'
+import { useState, useCallback, useMemo } from 'react'
 import { Button } from '@/components/ui/button'
+import { SOCIAL_LINKS, INTERNAL_LINKS } from '@/config/social-links'
+import type { SocialStat, CommunityFeature, SocialPost, NewsletterFormData } from '@/types/community'
 
 // Custom Discord icon
 const Discord = ({ className }: { className?: string }) => (
@@ -18,37 +22,41 @@ const Twitch = ({ className }: { className?: string }) => (
 )
 
 export function CommunitySection() {
-  const socialStats = [
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const socialStats: SocialStat[] = useMemo(() => [
     {
       platform: 'Discord',
       icon: <Discord className="h-6 w-6" />,
       members: '25K+',
       label: 'Members',
-      link: 'https://discord.gg/tempest',
-      color: 'bg-indigo-600 hover:bg-indigo-700'
+      link: SOCIAL_LINKS.discord,
+      color: 'bg-red-800 hover:bg-red-900'
     },
     {
       platform: 'Twitter',
       icon: <Twitter className="h-6 w-6" />,
       members: '150K+',
       label: 'Followers',
-      link: 'https://twitter.com/tempest',
-      color: 'bg-sky-500 hover:bg-sky-600'
+      link: SOCIAL_LINKS.twitter,
+      color: 'bg-red-700 hover:bg-red-800'
     },
     {
       platform: 'Instagram',
       icon: <Instagram className="h-6 w-6" />,
       members: '200K+',
       label: 'Followers',
-      link: 'https://instagram.com/tempest',
-      color: 'bg-pink-600 hover:bg-pink-700'
+      link: SOCIAL_LINKS.instagram,
+      color: 'bg-red-600 hover:bg-red-700'
     },
     {
       platform: 'YouTube',
       icon: <Youtube className="h-6 w-6" />,
       members: '500K+',
       label: 'Subscribers',
-      link: 'https://youtube.com/tempest',
+      link: SOCIAL_LINKS.youtube,
       color: 'bg-red-600 hover:bg-red-700'
     },
     {
@@ -56,33 +64,33 @@ export function CommunitySection() {
       icon: <Twitch className="h-6 w-6" />,
       members: '100K+',
       label: 'Followers',
-      link: 'https://twitch.tv/tempest',
-      color: 'bg-purple-600 hover:bg-purple-700'
+      link: SOCIAL_LINKS.twitch,
+      color: 'bg-red-900 hover:bg-black'
     }
-  ]
+  ], [])
 
-  const communityFeatures = [
+  const communityFeatures: CommunityFeature[] = useMemo(() => [
     {
       icon: <MessageCircle className="h-8 w-8" />,
       title: 'Active Discord',
       description: 'Join discussions, find teammates, and chat with pros',
-      link: '/discord'
+      link: INTERNAL_LINKS.discord
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: 'Fan Clubs',
       description: 'Local meetups and watch parties worldwide',
-      link: '/fanclubs'
+      link: INTERNAL_LINKS.fanClubs
     },
     {
       icon: <Heart className="h-8 w-8" />,
       title: 'Exclusive Content',
       description: 'Behind-the-scenes access for community members',
-      link: '/membership'
+      link: INTERNAL_LINKS.membership
     }
-  ]
+  ], [])
 
-  const latestPosts = [
+  const latestPosts: SocialPost[] = useMemo(() => [
     {
       platform: 'Twitter',
       content: 'VICTORY! 🏆 Our VALORANT team takes home the championship! GG WP to all teams.',
@@ -104,7 +112,70 @@ export function CommunitySection() {
       likes: '8.9K',
       time: '1 day ago'
     }
-  ]
+  ], [])
+
+  const handleNewsletterSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    return Sentry.startSpan(
+      {
+        op: 'ui.action',
+        name: 'Newsletter Subscription',
+      },
+      async (span: Sentry.Span) => {
+        try {
+          setIsSubmitting(true)
+          setSubmitStatus('idle')
+          
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+          if (!email || !emailRegex.test(email)) {
+            throw new Error('Invalid email address')
+          }
+          
+          span.setAttribute('email_domain', email.split('@')[1])
+          
+          // API call would go here
+          // const response = await fetch('/api/newsletter', { ... })
+          
+          // Simulate API call
+          await new Promise(resolve => setTimeout(resolve, 1000))
+          
+          setSubmitStatus('success')
+          setEmail('')
+          
+          span.setAttribute('subscription_status', 'success')
+        } catch (error) {
+          setSubmitStatus('error')
+          span.setAttribute('subscription_status', 'error')
+          
+          Sentry.captureException(error, {
+            tags: { feature: 'newsletter' },
+            contexts: {
+              form: {
+                email_provided: !!email,
+              }
+            }
+          })
+        } finally {
+          setIsSubmitting(false)
+        }
+      }
+    )
+  }, [email])
+
+  const handleSocialClick = useCallback((platform: string, link: string) => {
+    Sentry.startSpan(
+      {
+        op: 'ui.click',
+        name: 'Social Media Link Click',
+      },
+      (span: Sentry.Span) => {
+        span.setAttribute('platform', platform)
+        span.setAttribute('link', link)
+      }
+    )
+  }, [])
 
   return (
     <div className="space-y-16">
@@ -122,11 +193,13 @@ export function CommunitySection() {
             href={social.link}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => handleSocialClick(social.platform, social.link)}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             viewport={{ once: true }}
-            className={`group relative overflow-hidden rounded-lg ${social.color} p-6 text-white transition-all duration-300 transform hover:scale-105`}
+            className={`group relative overflow-hidden rounded-lg ${social.color} p-6 text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black`}
+            aria-label={`Visit our ${social.platform} page with ${social.members} ${social.label}`}
           >
             <div className="relative z-10 text-center space-y-2">
               <div className="flex justify-center mb-3">
@@ -174,7 +247,7 @@ export function CommunitySection() {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 p-12"
+        className="relative overflow-hidden rounded-xl bg-gradient-to-r from-red-600 to-black p-12"
       >
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
@@ -187,10 +260,15 @@ export function CommunitySection() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-indigo-600 hover:bg-gray-100 font-bold px-8 py-6 text-lg transform hover:scale-105 transition-all"
+            className="bg-white text-red-600 hover:bg-gray-100 font-bold px-8 py-6 text-lg transform hover:scale-105 transition-all"
             asChild
           >
-            <a href="https://discord.gg/tempest" target="_blank" rel="noopener noreferrer">
+            <a 
+              href={SOCIAL_LINKS.discord} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => handleSocialClick('Discord CTA', SOCIAL_LINKS.discord)}
+            >
               JOIN NOW - IT'S FREE
             </a>
           </Button>
@@ -259,16 +337,49 @@ export function CommunitySection() {
         <p className="text-gray-400 mb-6">
           Get the latest news, exclusive content, and special offers
         </p>
-        <div className="max-w-md mx-auto flex gap-3">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-1 px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:outline-none transition-colors"
-          />
-          <Button className="bg-red-600 hover:bg-red-700 text-white font-bold px-6">
-            SUBSCRIBE
-          </Button>
-        </div>
+        <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto space-y-3">
+          <div className="flex gap-3">
+            <label htmlFor="newsletter-email" className="sr-only">
+              Email address for newsletter
+            </label>
+            <input
+              id="newsletter-email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              disabled={isSubmitting}
+              required
+              aria-required="true"
+              aria-invalid={submitStatus === 'error'}
+              aria-describedby={submitStatus !== 'idle' ? 'newsletter-status' : undefined}
+              className="flex-1 px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            />
+            <Button 
+              type="submit"
+              disabled={isSubmitting || !email}
+              className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'SUBSCRIBING...' : 'SUBSCRIBE'}
+            </Button>
+          </div>
+          {submitStatus !== 'idle' && (
+            <p 
+              id="newsletter-status"
+              role="status"
+              aria-live="polite"
+              className={`text-sm ${
+                submitStatus === 'success' 
+                  ? 'text-green-400' 
+                  : 'text-red-400'
+              }`}
+            >
+              {submitStatus === 'success' 
+                ? '✓ Successfully subscribed! Check your email for confirmation.' 
+                : '✗ Something went wrong. Please try again.'}
+            </p>
+          )}
+        </form>
       </motion.div>
     </div>
   )

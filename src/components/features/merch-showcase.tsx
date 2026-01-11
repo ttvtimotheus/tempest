@@ -60,7 +60,7 @@ export function MerchShowcase() {
         viewport={{ once: true }}
         className="relative h-64 md:h-80 rounded-xl overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-pink-600" />
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800" />
         <div className="absolute inset-0 bg-black/20" />
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
@@ -114,14 +114,14 @@ export function MerchShowcase() {
                 <div className="absolute top-3 left-3 flex flex-col gap-2">
                   {product.badge && (
                     <span className={`px-3 py-1 text-xs font-bold text-white rounded ${
-                      product.badge === 'New' ? 'bg-green-600' : 
-                      product.badge === 'Limited' ? 'bg-purple-600' : 'bg-red-600'
+                      product.badge === 'New' ? 'bg-red-500' : 
+                      product.badge === 'Limited' ? 'bg-red-700' : 'bg-red-600'
                     }`}>
                       {product.badge}
                     </span>
                   )}
                   {product.bestseller && (
-                    <span className="px-3 py-1 bg-yellow-600 text-black text-xs font-bold rounded flex items-center gap-1">
+                    <span className="px-3 py-1 bg-red-400 text-white text-xs font-bold rounded flex items-center gap-1">
                       <TrendingUp className="h-3 w-3" />
                       Bestseller
                     </span>

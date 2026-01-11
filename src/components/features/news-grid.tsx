@@ -69,11 +69,11 @@ export function NewsGrid() {
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       'Announcement': 'bg-red-600',
-      'Tournament': 'bg-blue-600',
-      'Content': 'bg-purple-600',
-      'Partnership': 'bg-green-600',
-      'Interview': 'bg-yellow-600',
-      'Community': 'bg-pink-600'
+      'Tournament': 'bg-red-700',
+      'Content': 'bg-red-800',
+      'Partnership': 'bg-red-500',
+      'Interview': 'bg-red-900',
+      'Community': 'bg-red-400'
     }
     return colors[category] || 'bg-gray-600'
   }
