@@ -1,121 +1,77 @@
 import { HeroSection } from "@/components/features/hero-section"
 import { TeamsShowcase } from "@/components/features/teams-showcase"
-import { LatestVideos } from "@/components/features/latest-videos"
 import { NewsGrid } from "@/components/features/news-grid"
 import { MerchShowcase } from "@/components/features/merch-showcase"
 import { SponsorsSection } from "@/components/features/sponsors-section"
 import { EventsCalendar } from "@/components/features/events-calendar"
-import { CommunitySection } from "@/components/features/community-section"
+import { FactsFigures } from "@/components/features/facts-figures"
 
 export default function Home() {
   return (
     <div className="flex flex-col bg-black min-h-screen">
-      {/* Hero Section with Video Background */}
+      {/* Hero Section */}
       <HeroSection />
       
-      {/* Teams Showcase */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4 tracking-tight">
-              OUR <span className="text-red-500">TEAMS</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Dominating across multiple titles with world-class players
-            </p>
+      {/* Partners Bar - Clean minimal like MOUZ */}
+      <section className="bg-black border-y border-white/10 py-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <SponsorsSection />
+        </div>
+      </section>
+      
+      {/* Upcoming Matches */}
+      <section className="bg-black py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-3xl font-black text-white mb-8">
+            Upcoming matches
+          </h2>
+          <EventsCalendar />
+        </div>
+      </section>
+
+      {/* News Section */}
+      <section className="bg-black py-20 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-3xl font-black text-white mb-8">
+            NEWS
+          </h2>
+          <NewsGrid />
+        </div>
+      </section>
+
+      {/* Teams Section - G2 Style */}
+      <section className="bg-gradient-to-b from-black to-gray-950 py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <span className="text-red-500 text-sm font-bold uppercase tracking-wider">
+                Our Rosters
+              </span>
+              <h2 className="text-4xl font-black text-white mt-2">
+                TEMPEST TEAMS
+              </h2>
+            </div>
           </div>
           <TeamsShowcase />
         </div>
       </section>
-      
-      {/* Latest Videos Section */}
-      <section className="relative py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4 tracking-tight">
-              LATEST <span className="text-red-500">CONTENT</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Highlights, behind the scenes, and exclusive content
-            </p>
-          </div>
-          <LatestVideos />
-        </div>
-      </section>
-      
-      {/* News & Updates Grid */}
-      <section className="relative py-24 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4 tracking-tight">
-              NEWS & <span className="text-red-500">UPDATES</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Match reports, announcements, and team updates
-            </p>
-          </div>
-          <NewsGrid />
-        </div>
-      </section>
-      
-      {/* Merchandise Showcase */}
-      <section className="relative py-24 bg-black">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-black" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4 tracking-tight">
-              OFFICIAL <span className="text-red-500">MERCH</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Rep the team with our exclusive collection
-            </p>
-          </div>
+
+      {/* Facts & Figures - MOUZ Style Red Section */}
+      <FactsFigures />
+
+      {/* Merch Section */}
+      <section className="bg-black py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <MerchShowcase />
         </div>
       </section>
-      
-      {/* Events Calendar */}
-      <section className="relative py-24 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4 tracking-tight">
-              UPCOMING <span className="text-red-500">EVENTS</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Tournaments, watch parties, and community nights
-            </p>
-          </div>
-          <EventsCalendar />
-        </div>
-      </section>
-      
-      {/* Community Section */}
-      <section className="relative py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4 tracking-tight">
-              JOIN THE <span className="text-red-500">COMMUNITY</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Connect with fans worldwide
-            </p>
-          </div>
-          <CommunitySection />
-        </div>
-      </section>
-      
-      {/* Partners & Sponsors */}
-      <section className="relative py-24 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4 tracking-tight">
-              OUR <span className="text-red-500">PARTNERS</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Powered by industry leaders
-            </p>
-          </div>
+
+      {/* Bottom Partners */}
+      <section className="bg-gray-950 py-16 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-center text-gray-500 text-sm uppercase tracking-wider mb-8">
+            Powered by
+          </p>
           <SponsorsSection />
         </div>
       </section>
