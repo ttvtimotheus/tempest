@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 
@@ -123,9 +124,15 @@ export function FactsFigures() {
               </p>
             </div>
             
-            {/* Tempest Logo Placeholder */}
-            <div className="flex items-center justify-center w-32 h-32 lg:w-48 lg:h-48 bg-white/10 rounded-xl">
-              <span className="text-6xl lg:text-8xl font-black text-white">T</span>
+            {/* Tempest Logo */}
+            <div className="flex items-center justify-center w-32 h-32 lg:w-48 lg:h-48 bg-white/10 rounded-xl p-4">
+              <Image
+                src="/images/tempest-logo.svg"
+                alt="Tempest eSports"
+                width={180}
+                height={180}
+                className="w-full h-auto brightness-0 invert"
+              />
             </div>
           </div>
         </motion.div>

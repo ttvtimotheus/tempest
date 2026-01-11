@@ -1,9 +1,9 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 
 export function UpcomingMatches() {
   const matches = [
@@ -69,8 +69,14 @@ export function UpcomingMatches() {
                 {/* Teams */}
                 <div className="flex items-center gap-4 flex-1">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-black text-sm">T</span>
+                    <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center p-1.5">
+                      <Image
+                        src="/images/tempest-logo.svg"
+                        alt="Tempest"
+                        width={32}
+                        height={32}
+                        className="w-full h-full object-contain brightness-0 invert"
+                      />
                     </div>
                     <span className="font-bold text-white hidden md:inline">TEMPEST</span>
                   </div>
