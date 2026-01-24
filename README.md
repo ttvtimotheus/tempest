@@ -231,6 +231,7 @@ The app is a standard Next.js application and can be deployed to:
 ### CMS Migration
 The architecture supports easy migration to headless CMS:
 
+
 1. **Contentful/Strapi**: Replace JSON imports with API calls
 2. **Sanity**: Use GROQ queries 
 3. **Prismic**: Use Slice Machine
