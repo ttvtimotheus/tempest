@@ -1,0 +1,40 @@
+{
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "label": "Date",
+      "name": "date",
+      "required": true,
+      "type": "date"
+    },
+    {
+      "label": "Description",
+      "name": "description",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "label": "Hero Image",
+      "name": "hero_image",
+      "required": false,
+      "type": "image"
+    },
+    {
+      "label": "Content",
+      "name": "content",
+      "required": true,
+      "type": "rich_text"
+    },
+    {
+      "label": "Tags",
+      "name": "tags",
+      "required": false,
+      "type": "tags"
+    }
+  ]
+}
