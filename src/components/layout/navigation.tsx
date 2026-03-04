@@ -26,7 +26,7 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-red-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -49,8 +49,8 @@ export function Navigation() {
                 href={item.url}
                 className={`px-4 py-2 text-sm font-bold tracking-wider transition-all duration-300 ${
                   pathname === item.url
-                    ? 'text-red-500 border-b-2 border-red-500'
-                    : 'text-gray-300 hover:text-white hover:border-b-2 hover:border-red-500/50'
+                    ? 'text-cyan-500 border-b-2 border-cyan-500'
+                    : 'text-gray-300 hover:text-white hover:border-b-2 hover:border-cyan-500/50'
                 }`}
               >
                 {item.name}
@@ -88,7 +88,7 @@ export function Navigation() {
                         setShowLangDropdown(false)
                       }}
                       className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-800 transition-colors ${
-                        language === 'en' ? 'text-red-500 bg-gray-800' : 'text-white'
+                        language === 'en' ? 'text-cyan-500 bg-gray-800' : 'text-white'
                       }`}
                     >
                       English
@@ -99,7 +99,7 @@ export function Navigation() {
                         setShowLangDropdown(false)
                       }}
                       className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-800 transition-colors ${
-                        language === 'de' ? 'text-red-500 bg-gray-800' : 'text-white'
+                        language === 'de' ? 'text-cyan-500 bg-gray-800' : 'text-white'
                       }`}
                     >
                       Deutsch
@@ -113,7 +113,7 @@ export function Navigation() {
             <div className="hidden lg:flex items-center gap-3">
               <Button
                 size="sm"
-                className="bg-red-600 hover:bg-red-700 text-white font-bold"
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold"
                 asChild
               >
                 <Link href="/merchandise">
@@ -124,7 +124,7 @@ export function Navigation() {
               <Button
                 size="sm"
                 variant="outline"
-                className="border-red-500/50 text-red-500 hover:bg-red-500/10 font-bold"
+                className="border-cyan-500/50 text-cyan-500 hover:bg-cyan-500/10 font-bold"
                 asChild
               >
                 <Link href="/live">
@@ -137,7 +137,7 @@ export function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-white hover:text-red-500 transition-colors"
+              className="lg:hidden p-2 text-white hover:text-cyan-500 transition-colors"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -163,7 +163,7 @@ export function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 rounded text-lg font-bold transition-all ${
                     pathname === item.url
-                      ? 'bg-red-600 text-white'
+                      ? 'bg-cyan-600 text-white'
                       : 'text-gray-300 hover:bg-gray-900 hover:text-white'
                   }`}
                 >
@@ -173,7 +173,7 @@ export function Navigation() {
               
               <div className="pt-4 border-t border-gray-800 space-y-3">
                 <Button
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-bold"
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold"
                   asChild
                 >
                   <Link href="/merchandise">
@@ -183,7 +183,7 @@ export function Navigation() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full border-red-500/50 text-red-500 hover:bg-red-500/10 font-bold"
+                  className="w-full border-cyan-500/50 text-cyan-500 hover:bg-cyan-500/10 font-bold"
                   asChild
                 >
                   <Link href="/live">

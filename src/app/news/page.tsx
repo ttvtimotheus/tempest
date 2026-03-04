@@ -14,7 +14,7 @@ const getCategoryColor = (category: string) => {
     Partnership: 'bg-purple-600',
     Content: 'bg-cyan-600',
   }
-  return colors[category] || 'bg-red-600'
+  return colors[category] || 'bg-cyan-600'
 }
 
 export default function NewsPage() {
@@ -53,11 +53,11 @@ export default function NewsPage() {
                       <span className={`px-3 py-1 ${getCategoryColor(featuredArticle.category)} text-white text-xs font-bold rounded`}>
                         {featuredArticle.category}
                       </span>
-                      <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded">
+                      <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-bold rounded">
                         FEATURED
                       </span>
                     </div>
-                    <h2 className="text-3xl lg:text-4xl font-black text-white group-hover:text-red-500 transition-colors">
+                    <h2 className="text-3xl lg:text-4xl font-black text-white group-hover:text-cyan-500 transition-colors">
                       {featuredArticle.title}
                     </h2>
                     <p className="text-gray-400 text-lg leading-relaxed">
@@ -81,7 +81,7 @@ export default function NewsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherArticles.map((article) => (
               <Link key={article.id} href={`/news/${article.slug}`} className="group block">
-                <article className="bg-gray-900 rounded-xl overflow-hidden hover:ring-1 hover:ring-red-500/50 transition-all duration-300">
+                <article className="bg-gray-900 rounded-xl overflow-hidden hover:ring-1 hover:ring-cyan-500/50 transition-all duration-300">
                   <div className="relative aspect-[16/9]">
                     <div
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -95,7 +95,7 @@ export default function NewsPage() {
                     </div>
                   </div>
                   <div className="p-6 space-y-3">
-                    <h3 className="text-xl font-bold text-white group-hover:text-red-500 transition-colors line-clamp-2">
+                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-500 transition-colors line-clamp-2">
                       {article.title}
                     </h3>
                     <p className="text-gray-400 text-sm line-clamp-2">

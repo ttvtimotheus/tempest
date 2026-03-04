@@ -41,7 +41,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-end justify-between mb-8">
             <div>
-              <span className="text-red-500 text-sm font-bold uppercase tracking-wider">
+              <span className="text-cyan-500 text-sm font-bold uppercase tracking-wider">
                 Our Rosters
               </span>
               <h2 className="text-4xl font-black text-white mt-2">
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-end justify-between mb-8">
             <div>
-              <span className="text-red-500 text-sm font-bold uppercase tracking-wider">
+              <span className="text-cyan-500 text-sm font-bold uppercase tracking-wider">
                 Watch
               </span>
               <h2 className="text-4xl font-black text-white mt-2">
@@ -80,7 +80,7 @@ export default function Home() {
       <section className="bg-gray-950 py-20 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-red-500 text-sm font-bold uppercase tracking-wider">
+            <span className="text-cyan-500 text-sm font-bold uppercase tracking-wider">
               Join Us
             </span>
             <h2 className="text-4xl font-black text-white mt-2">

@@ -111,13 +111,13 @@ export default function ContactPage() {
                     required
                     rows={6}
                     placeholder="Your message..."
-                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none"
+                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-6 text-lg disabled:opacity-50"
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold px-8 py-6 text-lg disabled:opacity-50"
                 >
                   <Send className="mr-2 h-5 w-5" />
                   {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   <p className="text-green-400 text-sm">Message sent successfully! We&apos;ll get back to you soon.</p>
                 )}
                 {submitStatus === 'error' && (
-                  <p className="text-red-400 text-sm">Something went wrong. Please try again or email us directly.</p>
+                  <p className="text-cyan-400 text-sm">Something went wrong. Please try again or email us directly.</p>
                 )}
               </form>
             </div>
@@ -136,26 +136,26 @@ export default function ContactPage() {
                 <h3 className="text-lg font-bold text-white">GET IN TOUCH</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 text-red-500 mt-0.5" />
+                    <Mail className="h-5 w-5 text-cyan-500 mt-0.5" />
                     <div>
                       <p className="text-sm font-medium text-white">Email</p>
-                      <a href="mailto:contact@tempestesports.com" className="text-sm text-gray-400 hover:text-red-500 transition-colors">
+                      <a href="mailto:contact@tempestesports.com" className="text-sm text-gray-400 hover:text-cyan-500 transition-colors">
                         contact@tempestesports.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-red-500 mt-0.5" />
+                    <MapPin className="h-5 w-5 text-cyan-500 mt-0.5" />
                     <div>
                       <p className="text-sm font-medium text-white">Location</p>
                       <p className="text-sm text-gray-400">Berlin, Germany</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <MessageSquare className="h-5 w-5 text-red-500 mt-0.5" />
+                    <MessageSquare className="h-5 w-5 text-cyan-500 mt-0.5" />
                     <div>
                       <p className="text-sm font-medium text-white">Discord</p>
-                      <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-red-500 transition-colors">
+                      <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-cyan-500 transition-colors">
                         Join our server
                       </a>
                     </div>
@@ -168,19 +168,19 @@ export default function ContactPage() {
                 <div className="space-y-3 text-sm">
                   <div>
                     <p className="text-gray-500 uppercase text-xs font-bold">Partnerships</p>
-                    <a href="mailto:partners@tempestesports.com" className="text-gray-400 hover:text-red-500 transition-colors">
+                    <a href="mailto:partners@tempestesports.com" className="text-gray-400 hover:text-cyan-500 transition-colors">
                       partners@tempestesports.com
                     </a>
                   </div>
                   <div>
                     <p className="text-gray-500 uppercase text-xs font-bold">Media / Press</p>
-                    <a href="mailto:media@tempestesports.com" className="text-gray-400 hover:text-red-500 transition-colors">
+                    <a href="mailto:media@tempestesports.com" className="text-gray-400 hover:text-cyan-500 transition-colors">
                       media@tempestesports.com
                     </a>
                   </div>
                   <div>
                     <p className="text-gray-500 uppercase text-xs font-bold">Careers</p>
-                    <a href="mailto:careers@tempestesports.com" className="text-gray-400 hover:text-red-500 transition-colors">
+                    <a href="mailto:careers@tempestesports.com" className="text-gray-400 hover:text-cyan-500 transition-colors">
                       careers@tempestesports.com
                     </a>
                   </div>

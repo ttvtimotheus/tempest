@@ -113,12 +113,12 @@ export default function EventsPage() {
             {tournaments.map((event) => (
               <div
                 key={event.id}
-                className="bg-gray-900 border border-gray-800 rounded-xl p-6 lg:p-8 hover:border-red-500/30 transition-all"
+                className="bg-gray-900 border border-gray-800 rounded-xl p-6 lg:p-8 hover:border-cyan-500/30 transition-all"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                   <div className="space-y-3 flex-1">
                     <div className="flex items-center gap-3 flex-wrap">
-                      <Badge className="bg-red-600 text-white">
+                      <Badge className="bg-cyan-600 text-white">
                         {getGameDisplayName(event.game)}
                       </Badge>
                       {getStatusBadge(event.status)}
@@ -141,7 +141,7 @@ export default function EventsPage() {
                     </div>
                   </div>
                   <Button
-                    className="bg-red-600 hover:bg-red-700 text-white font-bold shrink-0"
+                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold shrink-0"
                     asChild
                   >
                     <a href={event.link} target="_blank" rel="noopener noreferrer">
@@ -171,7 +171,7 @@ export default function EventsPage() {
                 className="flex items-center justify-between bg-gray-900/50 border border-gray-800 rounded-lg p-4"
               >
                 <div className="flex items-center gap-4">
-                  <Badge className="bg-red-600 text-white text-xs">
+                  <Badge className="bg-cyan-600 text-white text-xs">
                     {getGameDisplayName(match.game)}
                   </Badge>
                   <span className="font-bold text-white">

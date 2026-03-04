@@ -10,7 +10,7 @@ export function FactsFigures() {
   const socialFans = statsData.socialFans
 
   return (
-    <section className="relative bg-red-600 overflow-hidden">
+    <section className="relative bg-cyan-600 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />

@@ -39,7 +39,7 @@ export function LatestVideos() {
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
             
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-red-500">
+              <div className="w-20 h-20 bg-cyan-600 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-cyan-500">
                 <Play className="h-8 w-8 text-white ml-1 fill-current" />
               </div>
             </div>
@@ -48,13 +48,13 @@ export function LatestVideos() {
               <span className="text-white text-sm font-medium">{featuredVideo.duration}</span>
             </div>
             
-            <div className="absolute top-4 left-4 bg-red-600 px-3 py-1 rounded">
+            <div className="absolute top-4 left-4 bg-cyan-600 px-3 py-1 rounded">
               <span className="text-white text-xs font-bold uppercase">{featuredVideo.category}</span>
             </div>
           </div>
           
           <div className="mt-4 space-y-2">
-            <h3 className="text-xl font-bold text-white group-hover:text-red-500 transition-colors">
+            <h3 className="text-xl font-bold text-white group-hover:text-cyan-500 transition-colors">
               {featuredVideo.title}
             </h3>
             <div className="flex items-center gap-4 text-sm text-gray-400">
@@ -92,7 +92,7 @@ export function LatestVideos() {
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                 
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center">
                     <Play className="h-5 w-5 text-white ml-0.5 fill-current" />
                   </div>
                 </div>
@@ -101,13 +101,13 @@ export function LatestVideos() {
                   {video.duration}
                 </div>
                 
-                <div className="absolute top-2 left-2 bg-red-600/90 px-2 py-0.5 rounded text-xs text-white font-bold">
+                <div className="absolute top-2 left-2 bg-cyan-600/90 px-2 py-0.5 rounded text-xs text-white font-bold">
                   {video.category}
                 </div>
               </div>
               
               <div className="mt-2">
-                <h4 className="text-sm font-semibold text-white group-hover:text-red-500 transition-colors line-clamp-2">
+                <h4 className="text-sm font-semibold text-white group-hover:text-cyan-500 transition-colors line-clamp-2">
                   {video.title}
                 </h4>
                 <div className="flex items-center gap-2 mt-1 text-xs text-gray-500">

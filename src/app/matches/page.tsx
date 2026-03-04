@@ -139,7 +139,7 @@ export default function MatchesPage() {
           {match.maps.map((map: any, index: number) => (
             <div key={index} className="flex justify-between">
               <span>{map.name}</span>
-              <span className={match.result === "W" ? "text-green-400" : "text-red-400"}>
+              <span className={match.result === "W" ? "text-green-400" : "text-cyan-400"}>
                 {map.scoreTeam} - {map.scoreOpp}
               </span>
             </div>

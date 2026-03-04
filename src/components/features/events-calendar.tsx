@@ -31,7 +31,7 @@ export function EventsCalendar() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1, duration: 0.4 }}
             viewport={{ once: true }}
-            className="group bg-gray-900/50 hover:bg-gray-900 border border-gray-800 hover:border-red-500/30 rounded-lg p-4 transition-all duration-300"
+            className="group bg-gray-900/50 hover:bg-gray-900 border border-gray-800 hover:border-cyan-500/30 rounded-lg p-4 transition-all duration-300"
           >
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-6 flex-1">
@@ -48,7 +48,7 @@ export function EventsCalendar() {
                 
                 <div className="flex items-center gap-4 flex-1">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center p-1.5">
+                    <div className="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center p-1.5">
                       <Image
                         src="/images/tempest-logo.svg"
                         alt="Tempest"
@@ -80,7 +80,7 @@ export function EventsCalendar() {
                 </div>
                 
                 {match.status === 'live' ? (
-                  <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full animate-pulse">
+                  <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-bold rounded-full animate-pulse">
                     LIVE
                   </span>
                 ) : (
@@ -103,7 +103,7 @@ export function EventsCalendar() {
       >
         <Link
           href="/matches"
-          className="inline-flex items-center gap-2 text-red-500 font-bold hover:gap-3 transition-all"
+          className="inline-flex items-center gap-2 text-cyan-500 font-bold hover:gap-3 transition-all"
         >
           VIEW SCHEDULE <ArrowRight className="h-5 w-5" />
         </Link>

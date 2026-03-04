@@ -48,13 +48,13 @@ export function TeamsShowcase() {
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                 
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-black text-white mb-2 group-hover:text-red-500 transition-colors">
+                  <h3 className="text-xl font-black text-white mb-2 group-hover:text-cyan-500 transition-colors">
                     {team.name}
                   </h3>
-                  <span className="inline-flex items-center gap-2 text-white/70 text-sm font-medium group-hover:text-red-500 group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-white/70 text-sm font-medium group-hover:text-cyan-500 group-hover:gap-3 transition-all">
                     View Roster <ArrowRight className="h-4 w-4" />
                   </span>
                 </div>
@@ -73,7 +73,7 @@ export function TeamsShowcase() {
       >
         <Link 
           href="/teams" 
-          className="inline-flex items-center gap-2 text-red-500 font-bold hover:gap-3 transition-all"
+          className="inline-flex items-center gap-2 text-cyan-500 font-bold hover:gap-3 transition-all"
         >
           VIEW ALL TEAMS <ArrowRight className="h-5 w-5" />
         </Link>

@@ -18,7 +18,7 @@ const tierLabels: Record<string, string> = {
 
 const tierColors: Record<string, string> = {
   title: 'bg-yellow-600',
-  major: 'bg-red-600',
+  major: 'bg-cyan-600',
   supporting: 'bg-gray-600',
 }
 
@@ -30,7 +30,7 @@ export default function PartnersPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-4">
-            <Handshake className="h-10 w-10 text-red-500" />
+            <Handshake className="h-10 w-10 text-cyan-500" />
             <h1 className="text-5xl md:text-7xl font-black text-white">
               PARTNERS
             </h1>
@@ -58,7 +58,7 @@ export default function PartnersPage() {
                 {tierSponsors.map((sponsor) => (
                   <div
                     key={sponsor.id}
-                    className="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-red-500/30 transition-all group"
+                    className="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-cyan-500/30 transition-all group"
                   >
                     <div className="flex items-center justify-center h-20 mb-6">
                       <Image
@@ -79,7 +79,7 @@ export default function PartnersPage() {
                         <ul className="space-y-1">
                           {sponsor.partnership.benefits.map((benefit, i) => (
                             <li key={i} className="text-sm text-gray-400 flex items-start gap-2">
-                              <span className="text-red-500 mt-1">•</span>
+                              <span className="text-cyan-500 mt-1">•</span>
                               {benefit}
                             </li>
                           ))}
@@ -106,13 +106,13 @@ export default function PartnersPage() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <h2 className="text-3xl font-black text-white">
-            BECOME A <span className="text-red-500">PARTNER</span>
+            BECOME A <span className="text-cyan-500">PARTNER</span>
           </h2>
           <p className="text-gray-400 text-lg">
             Interested in partnering with Tempest eSports? We offer a range of 
             partnership opportunities to connect your brand with millions of esports fans.
           </p>
-          <Button className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4" asChild>
+          <Button className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold px-8 py-4" asChild>
             <Link href="/contact">
               <Mail className="mr-2 h-5 w-5" />
               GET IN TOUCH

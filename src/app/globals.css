@@ -10,14 +10,14 @@
   --popover: 240 7% 8%;
   --popover-foreground: 0 0% 95%;
   
-  /* Strategic Accent Palette - Less saturated, more sophisticated */
-  --primary: 200 100% 28%;           /* Deep electric blue */
+  /* Strategic Accent Palette - Cyan theme */
+  --primary: 187 100% 28%;           /* Deep cyan */
   --primary-foreground: 0 0% 98%;
   --secondary: 240 4% 16%;           /* Graphite */
   --secondary-foreground: 0 0% 90%;
   --muted: 240 3% 12%;               /* Subtle elevation */
   --muted-foreground: 240 5% 50%;    /* Reduced contrast for hierarchy */
-  --accent: 200 80% 35%;             /* Accent blue */
+  --accent: 187 80% 35%;             /* Accent cyan */
   --accent-foreground: 0 0% 98%;
   
   /* Status with sophistication */
@@ -25,18 +25,19 @@
   --destructive-foreground: 0 0% 98%;
   --border: 240 5% 10%;              /* Subtle borders */
   --input: 240 5% 10%;
-  --ring: 200 100% 40%;
+  --ring: 187 100% 40%;
   --radius: 0.125rem;                /* Sharper, more modern */
   
   /* Signature Gaming Accents - More refined */
-  --glow-primary: 200 100% 45%;      /* Primary glow */
-  --glow-danger: 350 100% 55%;       /* Red glow */
+  --glow-primary: 187 100% 45%;      /* Primary glow */
+  --glow-danger: 350 100% 55%;       /* Danger glow */
   --glow-success: 140 100% 45%;      /* Green glow */
   
   /* Game-specific brand colors */
   --valorant: 348 83% 57%;           /* Riot red */
   --cs2: 30 100% 50%;                /* CS orange */
   --lol: 200 100% 45%;               /* League blue */
+  --neon-cyan: 187 100% 50%;         /* Neon cyan for focus */
 }
 
 @theme inline {

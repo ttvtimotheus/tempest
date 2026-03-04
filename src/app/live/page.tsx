@@ -24,9 +24,9 @@ export default function LivePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-4">
             <div className="relative">
-              <Radio className="h-10 w-10 text-red-500" />
+              <Radio className="h-10 w-10 text-cyan-500" />
               {liveMatches.length > 0 && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse" />
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-cyan-500 rounded-full animate-pulse" />
               )}
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white">
@@ -44,16 +44,16 @@ export default function LivePage() {
         <section className="pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
+              <span className="w-3 h-3 bg-cyan-500 rounded-full animate-pulse" />
               <h2 className="text-2xl font-black text-white">LIVE NOW</h2>
             </div>
             <div className="space-y-6">
               {liveMatches.map((match) => (
-                <div key={match.id} className="bg-red-950/30 border-2 border-red-500/50 rounded-xl p-8">
+                <div key={match.id} className="bg-cyan-950/30 border-2 border-cyan-500/50 rounded-xl p-8">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
-                        <Badge className="bg-red-600 text-white animate-pulse">LIVE</Badge>
+                        <Badge className="bg-cyan-600 text-white animate-pulse">LIVE</Badge>
                         <Badge className="bg-gray-800 text-white">
                           {getGameDisplayName(match.game)}
                         </Badge>
@@ -66,7 +66,7 @@ export default function LivePage() {
                         <div className="flex items-center gap-4 text-sm">
                           {match.maps.map((map, i) => (
                             <span key={i} className="text-gray-300">
-                              {map.name}: <span className="text-red-500 font-bold">{map.scoreTeam}</span> - <span className="font-bold">{map.scoreOpp}</span>
+                              {map.name}: <span className="text-cyan-500 font-bold">{map.scoreTeam}</span> - <span className="font-bold">{map.scoreOpp}</span>
                             </span>
                           ))}
                         </div>
@@ -75,7 +75,7 @@ export default function LivePage() {
                     {match.stream && (
                       <Button
                         size="lg"
-                        className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 shrink-0"
+                        className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold px-8 shrink-0"
                         asChild
                       >
                         <a href={match.stream} target="_blank" rel="noopener noreferrer">
@@ -107,7 +107,7 @@ export default function LivePage() {
                     Watch on Twitch
                   </a>
                 </Button>
-                <Button className="bg-red-600 hover:bg-red-700 text-white font-bold" asChild>
+                <Button className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold" asChild>
                   <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Watch on YouTube
@@ -123,7 +123,7 @@ export default function LivePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-black text-white flex items-center gap-3">
-              <Calendar className="h-6 w-6 text-red-500" />
+              <Calendar className="h-6 w-6 text-cyan-500" />
               UPCOMING MATCHES
             </h2>
             <Button variant="outline" className="border-gray-700 text-gray-300" asChild>
@@ -150,7 +150,7 @@ export default function LivePage() {
                     {new Date(match.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
                   </span>
                   {match.stream && (
-                    <Button size="sm" variant="ghost" className="text-red-500" asChild>
+                    <Button size="sm" variant="ghost" className="text-cyan-500" asChild>
                       <a href={match.stream} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4" />
                       </a>

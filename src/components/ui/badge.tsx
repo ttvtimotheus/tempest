@@ -20,7 +20,7 @@ const badgeVariants = cva(
           "border-transparent bg-yellow-500 text-black hover:bg-yellow-600",
         neon: "border-neon-cyan bg-neon-cyan/10 text-neon-cyan glow-text animate-pulse-neon",
         game: "border-transparent text-white font-bold",
-        live: "border-transparent bg-red-500 text-white animate-pulse shadow-lg shadow-red-500/50",
+        live: "border-transparent bg-cyan-500 text-white animate-pulse shadow-lg shadow-cyan-500/50",
       },
     },
     defaultVariants: {

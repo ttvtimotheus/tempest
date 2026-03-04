@@ -50,7 +50,7 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ gam
   return (
     <div className="min-h-screen bg-black">
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 to-black" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button variant="ghost" size="sm" asChild className="text-gray-400 hover:text-white mb-8">
             <Link href="/teams">
@@ -87,7 +87,7 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ gam
                 <p className="text-xs text-gray-500 uppercase">Wins</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-black text-red-500">{losses}</p>
+                <p className="text-3xl font-black text-cyan-500">{losses}</p>
                 <p className="text-xs text-gray-500 uppercase">Losses</p>
               </div>
             </div>
@@ -102,11 +102,11 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ gam
             {team.roster.map((player) => (
               <div
                 key={player.id}
-                className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-red-500/30 transition-all"
+                className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-black text-red-500">
+                  <div className="w-16 h-16 bg-cyan-600/20 rounded-full flex items-center justify-center">
+                    <span className="text-2xl font-black text-cyan-500">
                       {player.name.charAt(0)}
                     </span>
                   </div>
@@ -145,7 +145,7 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ gam
                     <span className="text-lg">{countryFlags[member.country] || '🏳️'}</span>
                   </div>
                   <h3 className="font-bold text-white">{member.name}</h3>
-                  <p className="text-sm text-red-500">{member.role}</p>
+                  <p className="text-sm text-cyan-500">{member.role}</p>
                 </div>
               ))}
             </div>
@@ -195,12 +195,12 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ gam
                       Tempest vs {match.opponent}
                     </span>
                     {match.result && (
-                      <Badge className={match.result === 'W' ? 'bg-green-600 text-white' : 'bg-red-600 text-white'}>
+                      <Badge className={match.result === 'W' ? 'bg-green-600 text-white' : 'bg-cyan-600 text-white'}>
                         {match.result === 'W' ? 'WIN' : 'LOSS'}
                       </Badge>
                     )}
                     {match.status === 'live' && (
-                      <Badge className="bg-red-600 text-white animate-pulse">LIVE</Badge>
+                      <Badge className="bg-cyan-600 text-white animate-pulse">LIVE</Badge>
                     )}
                     {match.status === 'upcoming' && (
                       <Badge variant="outline" className="border-gray-700">Upcoming</Badge>

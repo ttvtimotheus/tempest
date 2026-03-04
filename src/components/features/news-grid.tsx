@@ -37,7 +37,7 @@ export function NewsGrid() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                 
                 <div className="absolute top-3 left-3">
-                  <span className="px-2 py-1 bg-red-600 text-white text-xs font-bold rounded">
+                  <span className="px-2 py-1 bg-cyan-600 text-white text-xs font-bold rounded">
                     {article.category}
                   </span>
                 </div>
@@ -51,7 +51,7 @@ export function NewsGrid() {
                     year: 'numeric'
                   })}
                 </span>
-                <h3 className="text-lg font-bold text-white group-hover:text-red-500 transition-colors line-clamp-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-cyan-500 transition-colors line-clamp-2">
                   {article.title}
                 </h3>
               </div>
@@ -69,7 +69,7 @@ export function NewsGrid() {
       >
         <Link
           href="/news"
-          className="inline-flex items-center gap-2 text-red-500 font-bold hover:gap-3 transition-all"
+          className="inline-flex items-center gap-2 text-cyan-500 font-bold hover:gap-3 transition-all"
         >
           MORE NEWS <ArrowRight className="h-5 w-5" />
         </Link>

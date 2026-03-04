@@ -27,7 +27,7 @@ export function MerchShowcase() {
         className="space-y-6 lg:sticky lg:top-32"
       >
         <div className="space-y-4">
-          <span className="text-red-500 text-sm font-bold uppercase tracking-wider">
+          <span className="text-cyan-500 text-sm font-bold uppercase tracking-wider">
             Shop Now
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
@@ -42,7 +42,7 @@ export function MerchShowcase() {
         
         <Button
           size="lg"
-          className="bg-red-600 hover:bg-red-500 text-white font-bold group"
+          className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold group"
           asChild
         >
           <Link href="/merchandise">
@@ -74,7 +74,7 @@ export function MerchShowcase() {
               </div>
               
               <div className="space-y-1">
-                <h4 className="font-semibold text-white group-hover:text-red-500 transition-colors text-sm">
+                <h4 className="font-semibold text-white group-hover:text-cyan-500 transition-colors text-sm">
                   {product.name}
                 </h4>
                 <p className="text-gray-400 font-bold">

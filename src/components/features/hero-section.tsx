@@ -30,9 +30,9 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-600/20 border border-red-600/50 rounded-full">
-              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-              <span className="text-red-500 text-sm font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-600/20 border border-cyan-600/50 rounded-full">
+              <span className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse" />
+              <span className="text-cyan-500 text-sm font-semibold uppercase tracking-wider">
                 Live Now — VCT Challengers
               </span>
             </div>
@@ -40,7 +40,7 @@ export function HeroSection() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight">
               WE ARE
               <br />
-              <span className="text-red-500">TEMPEST</span>
+              <span className="text-cyan-500">TEMPEST</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-400 max-w-xl leading-relaxed">
@@ -51,7 +51,7 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-6 text-base group"
+                className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-8 py-6 text-base group"
                 asChild
               >
                 <Link href="/teams">
@@ -90,16 +90,16 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6 space-y-3">
-                  <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-bold rounded">
+                  <span className="inline-block px-3 py-1 bg-cyan-600 text-white text-xs font-bold rounded">
                     FEATURED
                   </span>
-                  <h3 className="text-2xl font-bold text-white group-hover:text-red-500 transition-colors">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-cyan-500 transition-colors">
                     {featuredArticle.title}
                   </h3>
                   <p className="text-gray-400 text-sm">
                     {featuredArticle.excerpt.slice(0, 100)}...
                   </p>
-                  <span className="inline-flex items-center text-red-500 font-semibold text-sm group-hover:gap-3 gap-2 transition-all">
+                  <span className="inline-flex items-center text-cyan-500 font-semibold text-sm group-hover:gap-3 gap-2 transition-all">
                     Read More <ArrowRight className="h-4 w-4" />
                   </span>
                 </div>

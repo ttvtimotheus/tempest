@@ -139,7 +139,7 @@ export function CommunitySection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             viewport={{ once: true }}
-            className={`group relative overflow-hidden rounded-lg ${social.color} p-6 text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black`}
+            className={`group relative overflow-hidden rounded-lg ${social.color} p-6 text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black`}
             aria-label={`Visit our ${social.platform} page with ${social.members} ${social.label}`}
           >
             <div className="relative z-10 text-center space-y-2">
@@ -165,13 +165,13 @@ export function CommunitySection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             viewport={{ once: true }}
-            className="group bg-gray-900 border border-gray-800 rounded-lg p-8 text-center hover:border-red-500/50 transition-all duration-300"
+            className="group bg-gray-900 border border-gray-800 rounded-lg p-8 text-center hover:border-cyan-500/50 transition-all duration-300"
           >
             <Link href={linkMap[feature.linkType] || '#'}>
-              <div className="flex justify-center mb-4 text-red-500">
+              <div className="flex justify-center mb-4 text-cyan-500">
                 {iconMap[feature.iconType]}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-500 transition-colors">
                 {feature.title}
               </h3>
               <p className="text-gray-400">
@@ -186,7 +186,7 @@ export function CommunitySection() {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="relative overflow-hidden rounded-xl bg-gradient-to-r from-red-600 to-black p-12"
+        className="relative overflow-hidden rounded-xl bg-gradient-to-r from-cyan-600 to-black p-12"
       >
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
@@ -199,7 +199,7 @@ export function CommunitySection() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-red-600 hover:bg-gray-100 font-bold px-8 py-6 text-lg transform hover:scale-105 transition-all"
+            className="bg-white text-cyan-600 hover:bg-gray-100 font-bold px-8 py-6 text-lg transform hover:scale-105 transition-all"
             asChild
           >
             <a 
@@ -226,7 +226,7 @@ export function CommunitySection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-red-500/50 transition-all duration-300"
+              className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
             >
               <div className="relative h-48 bg-gray-800">
                 <div
@@ -248,7 +248,7 @@ export function CommunitySection() {
                 </p>
                 <div className="flex items-center justify-between text-xs text-gray-500">
                   <span className="flex items-center gap-1">
-                    <Heart className="h-3 w-3 text-red-500" />
+                    <Heart className="h-3 w-3 text-cyan-500" />
                     {post.likes}
                   </span>
                   <span>{post.time}</span>
@@ -288,12 +288,12 @@ export function CommunitySection() {
               aria-required="true"
               aria-invalid={submitStatus === 'error'}
               aria-describedby={submitStatus !== 'idle' ? 'newsletter-status' : undefined}
-              className="flex-1 px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             />
             <Button 
               type="submit"
               disabled={isSubmitting || !email}
-              className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold px-6 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'SUBSCRIBING...' : 'SUBSCRIBE'}
             </Button>
@@ -306,7 +306,7 @@ export function CommunitySection() {
               className={`text-sm ${
                 submitStatus === 'success' 
                   ? 'text-green-400' 
-                  : 'text-red-400'
+                  : 'text-cyan-400'
               }`}
             >
               {submitStatus === 'success' 

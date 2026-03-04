@@ -55,14 +55,14 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             />
             {product.featured && (
               <div className="absolute top-4 left-4">
-                <Badge className="bg-red-600 text-white">NEW RELEASE</Badge>
+                <Badge className="bg-cyan-600 text-white">NEW RELEASE</Badge>
               </div>
             )}
           </div>
 
           <div className="space-y-8">
             <div className="space-y-4">
-              <p className="text-red-500 text-sm font-bold uppercase tracking-wider">
+              <p className="text-cyan-500 text-sm font-bold uppercase tracking-wider">
                 {product.category}
               </p>
               <h1 className="text-4xl font-black text-white">{product.name}</h1>
@@ -79,7 +79,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                   {product.sizes.map((size) => (
                     <button
                       key={size}
-                      className="px-4 py-2 border border-gray-700 rounded-lg text-white hover:border-red-500 hover:bg-red-500/10 transition-colors font-medium"
+                      className="px-4 py-2 border border-gray-700 rounded-lg text-white hover:border-cyan-500 hover:bg-cyan-500/10 transition-colors font-medium"
                     >
                       {size}
                     </button>
@@ -90,7 +90,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
             <Button
               size="lg"
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-6 text-lg"
+              className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-6 text-lg"
               disabled={!product.inStock}
             >
               <ShoppingBag className="mr-2 h-5 w-5" />
@@ -99,15 +99,15 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-800">
               <div className="text-center space-y-2">
-                <Truck className="h-6 w-6 text-red-500 mx-auto" />
+                <Truck className="h-6 w-6 text-cyan-500 mx-auto" />
                 <p className="text-xs text-gray-400">Free Shipping over $50</p>
               </div>
               <div className="text-center space-y-2">
-                <Shield className="h-6 w-6 text-red-500 mx-auto" />
+                <Shield className="h-6 w-6 text-cyan-500 mx-auto" />
                 <p className="text-xs text-gray-400">Official Licensed Gear</p>
               </div>
               <div className="text-center space-y-2">
-                <RotateCcw className="h-6 w-6 text-red-500 mx-auto" />
+                <RotateCcw className="h-6 w-6 text-cyan-500 mx-auto" />
                 <p className="text-xs text-gray-400">30-Day Returns</p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                       />
                     </div>
                     <div className="space-y-1">
-                      <h3 className="font-semibold text-white group-hover:text-red-500 transition-colors">
+                      <h3 className="font-semibold text-white group-hover:text-cyan-500 transition-colors">
                         {related.name}
                       </h3>
                       <p className="text-gray-400 font-bold">{related.price}</p>

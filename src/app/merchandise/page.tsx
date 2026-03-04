@@ -17,7 +17,7 @@ export default function MerchandisePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-4">
-            <ShoppingBag className="h-10 w-10 text-red-500" />
+            <ShoppingBag className="h-10 w-10 text-cyan-500" />
             <h1 className="text-5xl md:text-7xl font-black text-white">
               MERCH
             </h1>
@@ -53,7 +53,7 @@ export default function MerchandisePage() {
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                         {product.featured && (
                           <div className="absolute top-3 left-3">
-                            <Badge className="bg-red-600 text-white text-xs">NEW</Badge>
+                            <Badge className="bg-cyan-600 text-white text-xs">NEW</Badge>
                           </div>
                         )}
                         {!product.inStock && (
@@ -63,7 +63,7 @@ export default function MerchandisePage() {
                         )}
                       </div>
                       <div className="space-y-1">
-                        <h3 className="font-semibold text-white group-hover:text-red-500 transition-colors">
+                        <h3 className="font-semibold text-white group-hover:text-cyan-500 transition-colors">
                           {product.name}
                         </h3>
                         <p className="text-gray-400 font-bold text-lg">{product.price}</p>
@@ -85,7 +85,7 @@ export default function MerchandisePage() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <h2 className="text-3xl font-black text-white">
-            WANT CUSTOM <span className="text-red-500">TEAM GEAR</span>?
+            WANT CUSTOM <span className="text-cyan-500">TEAM GEAR</span>?
           </h2>
           <p className="text-gray-400 text-lg">
             Looking for bulk orders or custom merchandise for your team or event? 
@@ -93,7 +93,7 @@ export default function MerchandisePage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-lg transition-colors"
+            className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold px-8 py-4 rounded-lg transition-colors"
           >
             CONTACT US
           </Link>

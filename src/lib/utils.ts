@@ -55,7 +55,7 @@ export function getGameDisplayName(game: string) {
 
 export function getGameColor(game: string) {
   const gameColors: Record<string, string> = {
-    valorant: "text-red-400",
+    valorant: "text-cyan-400",
     cs2: "text-orange-400",
     lol: "text-blue-400",
   }

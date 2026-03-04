@@ -43,7 +43,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
         <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-16">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-4">
-              <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded">
+              <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-bold rounded">
                 {article.category}
               </span>
             </div>
@@ -94,7 +94,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
             <div className="grid md:grid-cols-3 gap-8">
               {relatedArticles.map((related) => (
                 <Link key={related.id} href={`/news/${related.slug}`} className="group block">
-                  <article className="bg-gray-900 rounded-xl overflow-hidden hover:ring-1 hover:ring-red-500/50 transition-all">
+                  <article className="bg-gray-900 rounded-xl overflow-hidden hover:ring-1 hover:ring-cyan-500/50 transition-all">
                     <div className="relative aspect-[16/9]">
                       <div
                         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -103,7 +103,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
                       <div className="absolute inset-0 bg-black/20" />
                     </div>
                     <div className="p-5 space-y-2">
-                      <h3 className="font-bold text-white group-hover:text-red-500 transition-colors line-clamp-2">
+                      <h3 className="font-bold text-white group-hover:text-cyan-500 transition-colors line-clamp-2">
                         {related.title}
                       </h3>
                       <p className="text-sm text-gray-500">
