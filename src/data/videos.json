@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "INSANE 1v5 ACE - VCT Highlights",
-    "thumbnail": "/images/videos/thumb-1.jpg",
+    "thumbnail": "/images/videos/thumb-1.svg",
     "duration": "10:23",
     "views": "125K",
     "date": "2 days ago",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "title": "Road to Major: Behind the Scenes",
-    "thumbnail": "/images/videos/thumb-2.jpg",
+    "thumbnail": "/images/videos/thumb-2.svg",
     "duration": "25:47",
     "views": "89K",
     "date": "5 days ago",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "title": "The Trophy Room - Documentary",
-    "thumbnail": "/images/videos/thumb-3.jpg",
+    "thumbnail": "/images/videos/thumb-3.svg",
     "duration": "45:12",
     "views": "203K",
     "date": "1 week ago",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "title": "Team Liquid vs Tempest - Finals",
-    "thumbnail": "/images/videos/thumb-4.jpg",
+    "thumbnail": "/images/videos/thumb-4.svg",
     "duration": "1:23:45",
     "views": "456K",
     "date": "2 weeks ago",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "title": "Rocket League Championship Recap",
-    "thumbnail": "/images/videos/thumb-5.jpg",
+    "thumbnail": "/images/videos/thumb-5.svg",
     "duration": "15:30",
     "views": "67K",
     "date": "3 weeks ago",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "title": "APEX Legends Tournament Win",
-    "thumbnail": "/images/videos/thumb-6.jpg",
+    "thumbnail": "/images/videos/thumb-6.svg",
     "duration": "18:45",
     "views": "92K",
     "date": "1 month ago",

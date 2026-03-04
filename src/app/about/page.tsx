@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('/images/about-hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/about-hero.svg')" }}
         />
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-4xl">
@@ -73,7 +73,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden bg-gray-900">
               <Image
-                src="/images/mission.jpg"
+                src="/images/mission.svg"
                 alt="Our Mission"
                 fill
                 className="object-cover"

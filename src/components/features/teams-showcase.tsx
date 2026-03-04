@@ -6,16 +6,16 @@ import { ArrowRight } from 'lucide-react'
 import teamsData from '@/data/teams.json'
 
 const teamImages: Record<string, string> = {
-  valorant: '/images/teams/valorant.jpg',
-  cs2: '/images/teams/cs2.jpg',
-  lol: '/images/teams/league.jpg',
+  valorant: '/images/teams/valorant.svg',
+  cs2: '/images/teams/cs2.svg',
+  lol: '/images/teams/league.svg',
 }
 
 export function TeamsShowcase() {
   const teams = teamsData.map(team => ({
     id: team.game,
     name: team.name.replace('Tempest ', ''),
-    image: teamImages[team.game] || '/images/teams/valorant.jpg',
+    image: teamImages[team.game] || '/images/teams/valorant.svg',
     link: `/teams/${team.game}`
   }))
 

@@ -60,21 +60,21 @@
     {
       "platform": "Twitter",
       "content": "VICTORY! Our VALORANT team takes home the championship! GG WP to all teams.",
-      "image": "/images/social/post-1.jpg",
+      "image": "/images/social/post-1.svg",
       "likes": "12.5K",
       "time": "2 hours ago"
     },
     {
       "platform": "Instagram",
       "content": "Behind the scenes from bootcamp. The grind never stops!",
-      "image": "/images/social/post-2.jpg",
+      "image": "/images/social/post-2.svg",
       "likes": "45.2K",
       "time": "5 hours ago"
     },
     {
       "platform": "Twitter",
       "content": "New roster announcement coming tomorrow! Who do you think it is?",
-      "image": "/images/social/post-3.jpg",
+      "image": "/images/social/post-3.svg",
       "likes": "8.9K",
       "time": "1 day ago"
     }

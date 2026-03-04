@@ -31,25 +31,25 @@
     {
       "name": "Michael Chen",
       "role": "CEO & Founder",
-      "image": "/images/team/ceo.jpg",
+      "image": "/images/team/ceo.svg",
       "bio": "Former competitive gamer turned entrepreneur with a vision to build Europe's premier esports organization."
     },
     {
       "name": "Sarah Williams",
       "role": "COO",
-      "image": "/images/team/coo.jpg",
+      "image": "/images/team/coo.svg",
       "bio": "Operations expert with 10+ years in sports management, ensuring Tempest runs at peak efficiency."
     },
     {
       "name": "David Kim",
       "role": "Head of Esports",
-      "image": "/images/team/head-esports.jpg",
+      "image": "/images/team/head-esports.svg",
       "bio": "Former pro player with deep knowledge of competitive gaming and talent development."
     },
     {
       "name": "Emma Johnson",
       "role": "Marketing Director",
-      "image": "/images/team/marketing.jpg",
+      "image": "/images/team/marketing.svg",
       "bio": "Brand strategist driving Tempest's growth across social media and partnerships."
     }
   ],
