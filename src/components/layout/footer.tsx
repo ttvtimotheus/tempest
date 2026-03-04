@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import { Twitter, Youtube, Twitch, Instagram, Mail } from "lucide-react"
@@ -45,12 +48,37 @@ const navigation = {
 }
 
 export function Footer() {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    
+    setIsSubmitting(true)
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (response.ok) {
+        setSubscribed(true)
+        setEmail('')
+      }
+    } catch {
+      // Silently handle error
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <footer className="bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            {/* Logo and Description */}
             <div className="mb-4">
               <Image
                 src="/images/tempest-logo.svg"
@@ -65,24 +93,29 @@ export function Footer() {
               across VALORANT, Counter-Strike 2, and League of Legends.
             </p>
             
-            {/* Newsletter Signup */}
             <div className="space-y-3">
               <h3 className="text-sm font-semibold text-foreground">
                 Stay Updated
               </h3>
-              <div className="flex space-x-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-input border border-border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-neon-cyan focus:border-transparent"
-                />
-                <Button size="sm" variant="neon">
-                  Subscribe
-                </Button>
-              </div>
+              {subscribed ? (
+                <p className="text-green-400 text-sm">Thanks for subscribing!</p>
+              ) : (
+                <form onSubmit={handleNewsletterSubmit} className="flex space-x-2">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    required
+                    className="flex-1 px-3 py-2 bg-input border border-border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-neon-cyan focus:border-transparent"
+                  />
+                  <Button size="sm" variant="neon" type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? '...' : 'Subscribe'}
+                  </Button>
+                </form>
+              )}
             </div>
             
-            {/* Social Links */}
             <div className="flex space-x-4">
               {navigation.social.map((item) => (
                 <a

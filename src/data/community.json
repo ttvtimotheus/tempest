@@ -1,0 +1,82 @@
+{
+  "socialStats": [
+    {
+      "platform": "Discord",
+      "iconType": "discord",
+      "members": "25K+",
+      "label": "Members",
+      "color": "bg-red-800 hover:bg-red-900"
+    },
+    {
+      "platform": "Twitter",
+      "iconType": "twitter",
+      "members": "150K+",
+      "label": "Followers",
+      "color": "bg-red-700 hover:bg-red-800"
+    },
+    {
+      "platform": "Instagram",
+      "iconType": "instagram",
+      "members": "200K+",
+      "label": "Followers",
+      "color": "bg-red-600 hover:bg-red-700"
+    },
+    {
+      "platform": "YouTube",
+      "iconType": "youtube",
+      "members": "500K+",
+      "label": "Subscribers",
+      "color": "bg-red-600 hover:bg-red-700"
+    },
+    {
+      "platform": "Twitch",
+      "iconType": "twitch",
+      "members": "100K+",
+      "label": "Followers",
+      "color": "bg-red-900 hover:bg-black"
+    }
+  ],
+  "communityFeatures": [
+    {
+      "iconType": "messageCircle",
+      "title": "Active Discord",
+      "description": "Join discussions, find teammates, and chat with pros",
+      "linkType": "discord"
+    },
+    {
+      "iconType": "users",
+      "title": "Fan Clubs",
+      "description": "Local meetups and watch parties worldwide",
+      "linkType": "fanClubs"
+    },
+    {
+      "iconType": "heart",
+      "title": "Exclusive Content",
+      "description": "Behind-the-scenes access for community members",
+      "linkType": "membership"
+    }
+  ],
+  "latestPosts": [
+    {
+      "platform": "Twitter",
+      "content": "VICTORY! Our VALORANT team takes home the championship! GG WP to all teams.",
+      "image": "/images/social/post-1.jpg",
+      "likes": "12.5K",
+      "time": "2 hours ago"
+    },
+    {
+      "platform": "Instagram",
+      "content": "Behind the scenes from bootcamp. The grind never stops!",
+      "image": "/images/social/post-2.jpg",
+      "likes": "45.2K",
+      "time": "5 hours ago"
+    },
+    {
+      "platform": "Twitter",
+      "content": "New roster announcement coming tomorrow! Who do you think it is?",
+      "image": "/images/social/post-3.jpg",
+      "likes": "8.9K",
+      "time": "1 day ago"
+    }
+  ]
+}

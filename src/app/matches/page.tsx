@@ -15,6 +15,77 @@ import matchesData from "@/data/matches.json"
 const games = ["all", "valorant", "cs2", "lol"]
 const statuses = ["all", "upcoming", "live", "finished"]
 
+function CalendarView({ matches, onDownload }: { matches: any[], onDownload: (match: any) => void }) {
+  const monthsWithMatches = matches.reduce((acc: Record<string, any[]>, match) => {
+    const monthKey = new Date(match.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+    if (!acc[monthKey]) acc[monthKey] = []
+    acc[monthKey].push(match)
+    return acc
+  }, {})
+
+  if (Object.keys(monthsWithMatches).length === 0) {
+    return (
+      <div className="text-center py-12">
+        <Calendar className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+        <p className="text-muted-foreground">No matches found with current filters.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-8">
+      {Object.entries(monthsWithMatches).map(([month, monthMatches]) => (
+        <div key={month}>
+          <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <Calendar className="w-5 h-5 text-neon-cyan" />
+            {month}
+          </h3>
+          <div className="grid gap-3">
+            {(monthMatches as any[]).map((match: any) => {
+              const matchDate = new Date(match.date)
+              return (
+                <div
+                  key={match.id}
+                  className="flex items-center gap-4 p-4 bg-card/60 backdrop-blur-sm rounded-lg border border-border/50 hover:bg-card/80 transition-colors"
+                >
+                  <div className="text-center min-w-[60px]">
+                    <div className="text-2xl font-black text-foreground">{matchDate.getDate()}</div>
+                    <div className="text-xs text-muted-foreground uppercase">
+                      {matchDate.toLocaleDateString('en-US', { weekday: 'short' })}
+                    </div>
+                  </div>
+                  <div className="w-px h-12 bg-border" />
+                  <div className="flex-1 space-y-1">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <Badge variant="game" className={`${getGameColor(match.game)} bg-current/10 border-current/20`}>
+                        {getGameDisplayName(match.game)}
+                      </Badge>
+                      {match.status === 'live' && <Badge variant="live">LIVE</Badge>}
+                      {match.result === 'W' && <Badge variant="success"><Trophy className="w-3 h-3 mr-1" />Won</Badge>}
+                      {match.result === 'L' && <Badge variant="destructive">Lost</Badge>}
+                    </div>
+                    <p className="font-semibold text-foreground">Tempest vs {match.opponent}</p>
+                    <p className="text-sm text-muted-foreground">{match.tournament}</p>
+                  </div>
+                  <div className="text-right space-y-1">
+                    <p className="text-sm font-medium text-foreground">
+                      {matchDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Berlin' })}
+                    </p>
+                    <p className="text-xs text-muted-foreground">CET</p>
+                  </div>
+                  <Button size="sm" variant="ghost" onClick={() => onDownload(match)}>
+                    <Download className="w-4 h-4" />
+                  </Button>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function MatchesPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedGame, setSelectedGame] = useState("all")
@@ -239,13 +310,7 @@ export default function MatchesPage() {
             </TabsContent>
             
             <TabsContent value="calendar" className="space-y-4">
-              <div className="text-center py-12">
-                <Calendar className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">Calendar view coming soon!</p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  For now, use list view and download individual match events.
-                </p>
-              </div>
+              <CalendarView matches={filteredMatches} onDownload={handleDownloadCalendar} />
             </TabsContent>
           </Tabs>
         </div>

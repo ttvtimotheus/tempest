@@ -130,9 +130,9 @@ export default function TeamsPage() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/players">
+              <Link href="/about">
                 <Users className="w-5 h-5 mr-2" />
-                Meet the Players
+                About Tempest
               </Link>
             </Button>
           </div>

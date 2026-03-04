@@ -1,0 +1,63 @@
+{
+  "stats": [
+    { "value": "2020", "label": "Founded" },
+    { "value": "50+", "label": "Players" },
+    { "value": "15", "label": "Championships" },
+    { "value": "5", "label": "Game Titles" }
+  ],
+  "values": [
+    {
+      "icon": "trophy",
+      "title": "Excellence",
+      "description": "We strive for excellence in every match, pushing boundaries and setting new standards."
+    },
+    {
+      "icon": "users",
+      "title": "Community",
+      "description": "Building a strong, supportive community of players and fans worldwide."
+    },
+    {
+      "icon": "target",
+      "title": "Dedication",
+      "description": "Committed to continuous improvement and achieving our goals together."
+    },
+    {
+      "icon": "heart",
+      "title": "Passion",
+      "description": "Driven by our love for gaming and competitive esports."
+    }
+  ],
+  "team": [
+    {
+      "name": "Michael Chen",
+      "role": "CEO & Founder",
+      "image": "/images/team/ceo.jpg",
+      "bio": "Former competitive gamer turned entrepreneur with a vision to build Europe's premier esports organization."
+    },
+    {
+      "name": "Sarah Williams",
+      "role": "COO",
+      "image": "/images/team/coo.jpg",
+      "bio": "Operations expert with 10+ years in sports management, ensuring Tempest runs at peak efficiency."
+    },
+    {
+      "name": "David Kim",
+      "role": "Head of Esports",
+      "image": "/images/team/head-esports.jpg",
+      "bio": "Former pro player with deep knowledge of competitive gaming and talent development."
+    },
+    {
+      "name": "Emma Johnson",
+      "role": "Marketing Director",
+      "image": "/images/team/marketing.jpg",
+      "bio": "Brand strategist driving Tempest's growth across social media and partnerships."
+    }
+  ],
+  "mission": {
+    "title": "OUR MISSION",
+    "paragraphs": [
+      "Founded in 2020, Tempest eSports has rapidly grown to become one of the most respected organizations in competitive gaming. We believe in nurturing talent, fostering innovation, and creating opportunities for players to reach their full potential.",
+      "Our mission is simple: to dominate the digital battlefield while building a legacy that inspires the next generation of esports athletes. We're not just playing games – we're shaping the future of competitive gaming."
+    ]
+  }
+}

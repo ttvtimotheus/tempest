@@ -3,42 +3,21 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import newsData from '@/data/news.json'
 
 export function NewsGrid() {
-  const news = [
-    {
-      id: 1,
-      title: 'Tempest Signs New VALORANT Roster for 2025 Season',
-      image: '/images/news/news-1.jpg',
-      category: 'Announcement',
-      date: '2024-01-15',
-    },
-    {
-      id: 2,
-      title: 'Championship Victory: CS2 Team Takes Home Major Trophy',
-      image: '/images/news/news-2.jpg',
-      category: 'Tournament',
-      date: '2024-01-12',
-    },
-    {
-      id: 3,
-      title: 'Behind the Scenes: Training Camp Documentary',
-      image: '/images/news/news-3.jpg',
-      category: 'Content',
-      date: '2024-01-10',
-    },
-    {
-      id: 4,
-      title: 'New Partnership with Gaming Peripheral Giant',
-      image: '/images/news/news-4.jpg',
-      category: 'Partnership',
-      date: '2024-01-08',
-    },
-  ]
+  const news = newsData.slice(0, 4)
+
+  if (news.length === 0) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-gray-400">No news articles available.</p>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-8">
-      {/* Clean News Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {news.map((article, index) => (
           <motion.article
@@ -49,8 +28,7 @@ export function NewsGrid() {
             viewport={{ once: true }}
             className="group"
           >
-            <Link href={`/news/${article.id}`} className="block space-y-4">
-              {/* Image */}
+            <Link href={`/news/${article.slug}`} className="block space-y-4">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-900">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -58,7 +36,6 @@ export function NewsGrid() {
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                 
-                {/* Category Tag */}
                 <div className="absolute top-3 left-3">
                   <span className="px-2 py-1 bg-red-600 text-white text-xs font-bold rounded">
                     {article.category}
@@ -66,10 +43,9 @@ export function NewsGrid() {
                 </div>
               </div>
               
-              {/* Content */}
               <div className="space-y-2">
                 <span className="text-sm text-gray-500">
-                  {new Date(article.date).toLocaleDateString('en-US', { 
+                  {new Date(article.publishedAt).toLocaleDateString('en-US', { 
                     month: 'short', 
                     day: 'numeric',
                     year: 'numeric'
@@ -84,7 +60,6 @@ export function NewsGrid() {
         ))}
       </div>
       
-      {/* View All Link */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

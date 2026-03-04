@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ExternalLink, Download } from "lucide-react"
-import { formatDateTime, getGameDisplayName, getGameColor, isLive } from "@/lib/utils"
+import { formatDateTime, getGameDisplayName, getGameColor, isLive, generateICSFile, downloadICS } from "@/lib/utils"
 import matchesData from "@/data/matches.json"
 
 const upcomingMatches = matchesData
@@ -22,12 +22,16 @@ export function UpcomingMatches() {
     )
   }
 
+  const handleDownloadCalendar = (match: typeof upcomingMatches[0]) => {
+    const icsContent = generateICSFile(match)
+    downloadICS(icsContent, `tempest-vs-${match.opponent.replace(/\s+/g, '-').toLowerCase()}.ics`)
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {upcomingMatches.map((match) => (
         <Card key={match.id} className="overflow-hidden bg-card/80 backdrop-blur-sm hover:bg-card transition-colors">
           <CardContent className="p-6">
-            {/* Game Badge and Status */}
             <div className="flex items-center justify-between mb-4">
               <Badge 
                 variant="game" 
@@ -45,12 +49,10 @@ export function UpcomingMatches() {
               )}
             </div>
             
-            {/* Tournament */}
             <div className="text-sm text-muted-foreground mb-2">
               {match.tournament}
             </div>
             
-            {/* Match Details */}
             <div className="mb-4">
               <div className="font-semibold text-lg text-foreground mb-1">
                 Tempest vs {match.opponent}
@@ -61,7 +63,6 @@ export function UpcomingMatches() {
               </div>
             </div>
             
-            {/* Stream Link */}
             {match.stream && (
               <div className="mb-4">
                 <a
@@ -76,7 +77,6 @@ export function UpcomingMatches() {
               </div>
             )}
             
-            {/* Actions */}
             <div className="flex gap-2">
               <Button 
                 size="sm" 
@@ -84,17 +84,14 @@ export function UpcomingMatches() {
                 className="flex-1"
                 asChild
               >
-                <Link href={`/matches/${match.id}`}>
+                <Link href="/matches">
                   View Details
                 </Link>
               </Button>
               <Button 
                 size="sm" 
                 variant="ghost"
-                onClick={() => {
-                  // This would trigger ICS download
-                  console.log('Download calendar event for:', match.id)
-                }}
+                onClick={() => handleDownloadCalendar(match)}
               >
                 <Download className="w-4 h-4" />
               </Button>

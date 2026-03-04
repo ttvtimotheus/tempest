@@ -1,0 +1,69 @@
+{
+  "highlights": [
+    {
+      "value": "27",
+      "label": "Titles",
+      "sublabel": "Won"
+    },
+    {
+      "value": "5",
+      "label": "Active",
+      "sublabel": "Game Titles"
+    },
+    {
+      "value": "50+",
+      "label": "Pro",
+      "sublabel": "Players"
+    },
+    {
+      "value": "3",
+      "label": "Years",
+      "sublabel": "Of Excellence"
+    }
+  ],
+  "socialFans": "2M+",
+  "heroStats": [
+    { "value": "27", "label": "Championships" },
+    { "value": "50+", "label": "Pro Players" },
+    { "value": "5", "label": "Game Titles" },
+    { "value": "2M+", "label": "Fans Worldwide" }
+  ],
+  "detailedStats": [
+    {
+      "label": "Tournaments Won",
+      "value": "27",
+      "icon": "crown",
+      "glowColor": "orange",
+      "description": "Major championship victories",
+      "suffix": "",
+      "highlight": "Elite Status"
+    },
+    {
+      "label": "Win Rate",
+      "value": "73",
+      "icon": "target",
+      "glowColor": "green",
+      "description": "Match win percentage",
+      "suffix": "%",
+      "highlight": "Dominance"
+    },
+    {
+      "label": "Pro Players",
+      "value": "15",
+      "icon": "swords",
+      "glowColor": "blue",
+      "description": "World-class roster",
+      "suffix": "",
+      "highlight": "Active Roster"
+    },
+    {
+      "label": "Years Elite",
+      "value": "3",
+      "icon": "gamepad",
+      "glowColor": "purple",
+      "description": "Professional excellence",
+      "suffix": "",
+      "highlight": "Experience"
+    }
+  ]
+}

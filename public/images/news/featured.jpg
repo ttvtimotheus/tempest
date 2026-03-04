@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1067" viewBox="0 0 800 1067">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#150505;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1067" fill="url(#bg)"/>
+  <rect x="0" y="746.9" width="800" height="320.09999999999997" fill="url(#accent)"/>
+  <line x1="0" y1="906.9499999999999" x2="800" y2="906.9499999999999" stroke="#dc2626" stroke-width="2" opacity="0.5"/>
+  <text x="400" y="523.5" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" fill="white" text-anchor="middle" opacity="0.9">FEATURED</text>
+  <text x="400" y="563.5" font-family="system-ui, -apple-system, sans-serif" font-size="28.000000000000004" fill="#dc2626" text-anchor="middle" opacity="0.7">NEWS</text>
+</svg>
